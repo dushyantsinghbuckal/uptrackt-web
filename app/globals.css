@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -------- Mobile polish -------- */
+
+@media (max-width: 640px) {
+  h1 {
+    line-height: 1.15;
+  }
+
+  h2 {
+    line-height: 1.2;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* ========== Testimonial Pages ========== */
+
+.testimonial-section {
+  margin-bottom: 48px;
+}
+
+.testimonial-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.testimonial-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  max-width: 720px;
+}
+
+.testimonial-attribution {
+  margin-top: 24px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #222;
+}
+
+/* ===============================
+   Testimonial Pages – Uptrackt
+================================ */
+
+.testimonial-section {
+  margin-bottom: 64px;
+}
+
+.testimonial-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #0f172a; /* Uptrackt dark */
+}
+
+.testimonial-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #334155;
+  max-width: 720px;
+  margin-bottom: 16px;
+}
+
+/* Customer quotes */
+
+.testimonial-evidence {
+  background: #f8fafc;
+  padding: 40px;
+  border-radius: 16px;
+}
+
+/* Quote cards (clean, single colour) */
+
+.quote-card {
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  background: #ffffff;
+  border-left: 4px solid #2563eb; /* Uptrackt blue */
+  border-radius: 8px;
+}
+
+.quote-text {
+  font-size: 16px;
+  color: #1e293b;
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.quote-meta {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Attribution */
+
+.testimonial-attribution {
+  margin-top: 32px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+/* CTA */
+
+.testimonial-cta {
+  margin-top: 96px;
+  padding: 56px;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  border-radius: 16px;
+  color: #ffffff;
+}
+
+.testimonial-cta h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.testimonial-cta p {
+  font-size: 16px;
+  color: #cbd5f5;
+  margin-bottom: 28px;
+  max-width: 520px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #f59e0b; /* Uptrackt accent */
+  color: #020617;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #fbbf24;
+}
