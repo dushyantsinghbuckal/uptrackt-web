@@ -29,21 +29,21 @@ export default function Navbar() {
         scrolled ? "border-b border-gray-200 shadow-sm" : ""
       }`}
     >
-      <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-1">
+      <div className="mx-auto max-w-7xl px-8 h-22 flex items-center justify-between">
+        {/* Logo */} 
+        <Link href="/" className="flex items-center">
           <img
             src="/file.svg"
             alt="Uptrackt logo"
-            className="h-14 md:h-16 w-auto shrink-0"
+            className="h-30 md:h-42 w-auto shrink-0"
           />
-          <span className="text-2xl md:text-3xl font-bold text-gray-900">
+         <span className="-ml-11 text-xl md:text-3xl font-bold leading-none text-gray-900">
             Uptrackt
           </span>
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+        <div className="hidden md:flex items-center gap-8 text-base md:text-2xl font-medium">
           {links.map((link) => {
             const isActive =
               link.href === "/"
@@ -70,14 +70,15 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           {/* Desktop CTA */}
           <Link
-            href="/request-demo"
-            className="hidden md:inline-flex items-center justify-center
-                       rounded-full bg-black px-6 py-3
-                       text-sm font-medium text-white
-                       hover:opacity-90 transition"
-          >
-            Let’s Collaborate
-          </Link>
+          href="/request-demo"
+         onClick={() => setMobileOpen(false)}
+          className="hidden md:inline-flex items-center justify-center
+          rounded-full bg-black px-4 py-2
+           text-xl font-bold text-white
+           hover:opacity-90 transition"
+           >
+           Let’s Collaborate
+           </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -93,7 +94,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="md:hidden border-t border-gray-200 bg-white">
-          <div className="flex flex-col gap-4 px-6 py-4 text-sm">
+          <div className="flex flex-col gap-4 px-6 py-5 text-lg">
             {links.map((link) => (
               <Link
                 key={link.name}
@@ -113,9 +114,9 @@ export default function Navbar() {
             <Link
               href="/request-demo"
               onClick={() => setMobileOpen(false)}
-              className="rounded-full bg-black px-6 py-3
-                         text-center text-white font-medium
-                         hover:opacity-90 transition"
+              className="rounded-full bg-black px-4 py-2
+               text-center text-white text-xl font-bold
+               hover:opacity-90 transition"
             >
               Let’s Collaborate
             </Link>

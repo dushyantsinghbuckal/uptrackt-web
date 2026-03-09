@@ -14,10 +14,10 @@ export default function Footer() {
     <img
       src="/file.svg"
       alt="Uptrackt logo"
-      className="block h-40 w-auto shrink-0"
+      className="block h-48 w-auto shrink-0"
     />
             </div>
-            <p className="mt-0 text-2xl leading-[1.2] font-normal tracking-tight text-gray-400">
+            <p className="-mt-16 text-2xl leading-[1.2] font-normal tracking-tight text-gray-400">
         Insights where <br />
         decisions happen.
       </p>
@@ -25,45 +25,80 @@ export default function Footer() {
     
           {/* Product */}
           <div>
-            <h4 className="text-2xl font-semibold tracking-tight text-black">
+            <h4 className="text-3xl font-semibold tracking-tight text-black">
               Product
             </h4>
-            <ul className="mt-4 space-y-3 text-xl font-normal tracking-tight text-gray-400">
-              <li><Link href="/platform">Platform</Link></li>
-              <li><Link href="/platform#how-it-works">How It Works</Link></li>
-              <li><Link href="/platform#capabilities">Capabilities</Link></li>
-              <li><Link href="/features">Features</Link></li>
-            </ul>
+            <ul className="mt-4 space-y-3 text-xl font-normal tracking-tight">
+  <li>
+    <Link href="/platform" className="text-gray-400 hover:text-black transition-colors duration-200">
+      Platform
+    </Link>
+  </li>
+  <li>
+    <Link href="/platform#how-it-works" className="text-gray-400 hover:text-black transition-colors duration-200">
+      How It Works
+    </Link>
+  </li>
+  <li>
+    <Link href="/platform#capabilities" className="text-gray-400 hover:text-black transition-colors duration-200">
+      Platform Capabilities
+    </Link>
+  </li>
+  <li>
+    <Link href="/features" className="text-gray-400 hover:text-black transition-colors duration-200">
+      Features
+    </Link>
+  </li>
+</ul>
           </div>
 
           {/* About */}
           <div>
-            <h4 className="text-2xl font-semibold tracking-tight text-black">
+            <h4 className="text-3xl font-semibold tracking-tight text-black">
               About
             </h4>
-            <ul className="mt-4 space-y-3 text-xl font-normal tracking-tight text-gray-400">
-              <li><Link href="/resources">Resources</Link></li>
-              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link href="/terms">Terms of Service</Link></li>
-            </ul>
+            <ul className="mt-4 space-y-3 text-xl font-normal tracking-tight">
+  <li>
+    <Link
+      href="/resources"
+      className="text-gray-400 hover:text-black transition-colors duration-200"
+    >
+      Resources
+    </Link>
+  </li>
+  <li>
+    <Link
+      href="/privacy-policy"
+      className="text-gray-400 hover:text-black transition-colors duration-200"
+    >
+      Privacy Policy
+    </Link>
+  </li>
+  <li>
+    <Link
+      href="/terms"
+      className="text-gray-400 hover:text-black transition-colors duration-200"
+    >
+      Terms of Service
+    </Link>
+  </li>
+</ul>
           </div>
 
           {/* Get Started */}
           <div>
-            <h4 className="text-2xl font-semibold tracking-tight text-black">
+            <h4 className="text-3xl font-semibold tracking-tight text-black">
               Get Started
             </h4>
 
             <p className="mt-4 text-xl font-normal tracking-tight text-gray-400">
               See how Uptrackt helps you turn feedback into growth.
             </p>
-
-            
-          </div>
+            </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 border-t pt-6 text-center text-xl font-normal tracking-tight text-gray-400">
+        <div className="mt-12 border-t pt-6 text-center text-10px font-normal tracking-tight text-gray-400">
           © 2026 Uptrackt. All rights reserved.
         </div>
       </div>

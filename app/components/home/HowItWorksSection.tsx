@@ -1,43 +1,29 @@
-export default function HowItWorks() {
-    const steps = [
-      {
-        title: "Capture",
-        desc: "Collect feedback at critical journey moments automatically."
-      },
-      {
-        title: "Analyze",
-        desc: "Identify friction, drop-offs, and sentiment patterns in real time."
-      },
-      {
-        title: "Act",
-        desc: "Trigger alerts and insights that teams can act on instantly."
-      }
-    ];
-  
-    return (
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-gray-900">
-            How Uptrackt Works
-          </h2>
-  
-          <div className="mt-14 grid gap-10 md:grid-cols-3">
-            {steps.map((step, i) => (
-              <div
-                key={i}
-                className="rounded-xl border p-8 bg-white shadow-sm"
-              >
-                <h3 className="text-xl font-semibold text-gray-900">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-gray-600">
-                  {step.desc}
-                </p>
-              </div>
-            ))}
-          </div>
+export default function HowItWorksSection() {
+  return (
+    <section className="bg-black py-14">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+
+        {/* BIG PRIMARY CONTENT */}
+        <h2 className="text-white font-semibold tracking-widest leading-none space-y-8">
+          <div className="text-6xl md:text-8xl">CAPTURE</div>
+          <div className="text-6xl md:text-8xl text-gray-500">ANALYZE</div>
+          <div className="text-6xl md:text-8xl">ACT</div>
+        </h2>
+
+        {/* SUBTEXT / EXPLANATION */}
+        <div className="mt-14 max-w-3xl mx-auto space-y-5 text-white text-base md:text-2xl leading-relaxed">
+          <p>
+            Capture feedback at the exact moments that shape customer decisions.
+          </p>
+          <p>
+            Analyze friction, sentiment, and drop-offs as they happen.
+          </p>
+          <p>
+            Act instantly with insights your teams can’t ignore.
+          </p>
         </div>
-      </section>
-    );
-  }
-  
+
+      </div>
+    </section>
+  );
+}

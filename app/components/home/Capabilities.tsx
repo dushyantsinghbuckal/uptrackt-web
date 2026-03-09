@@ -1,62 +1,88 @@
+import { GlobeLockIcon } from "../icons/FeatureIcons";
+import { RouteIcon } from "../icons/FeatureIcons";
+import { ClockAlertIcon } from "../icons/FeatureIcons";
+import { MessageSquareTextIcon } from "../icons/FeatureIcons";
+import { BookUserIcon } from "../icons/FeatureIcons";
+import { FileAlertIcon } from "../icons/FeatureIcons";
 export default function Capabilities() {
-  const items = [
-    {
-      title: "Moment-based Surveys",
-      desc: "Capture feedback at the exact moment customers experience friction or intent.",
-    },
-    {
-      title: "Journey Analytics",
-      desc: "Understand how customers move across touchpoints and where they drop off.",
-    },
-    {
-      title: "Customer Friction Detection",
-      desc: "Identify blockers early before they impact conversions or retention.",
-    },
-    {
-      title: "Real-time Alerts",
-      desc: "Get notified instantly when customer experience starts to degrade.",
-    },
-    {
-      title: "Actionable CX Insights",
-      desc: "Turn feedback into clear, prioritized actions for product and CX teams.",
-    },
-    {
-      title: "Enterprise-ready Security",
-      desc: "Built with privacy, compliance, and scale in mind.",
-    },
-  ];
-
   return (
-    <section className="bg-gray-50 py-32 border-t border-gray-100">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Heading */}
-        <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Platform Capabilities
-          </h2>
+    <div className="max-w-7xl mx-auto px-6">
+      
+      {/* Section title */}
+      <h2 className="text-white text-5xl md:text-6xl font-semibold text-center mb-16">
+        Platform Capabilities
+      </h2>
+
+      {/* Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
+
+        {/* Wide card */}
+        <div className="relative col-span-1 md:col-span-3 rounded-3xl bg-neutral-400 p-10">
+        <BookUserIcon className="absolute top-6 right-6 w-15 h-15 text-black opacity-99" />
+          <h3 className="text-5xl font-semibold text-black">
+            Moment-based Surveys
+          </h3>
+          <p className="mt-6 text-lg text-white text-lg md:text-xl font-semibold leading-relaxed">
+            Capture feedback at the exact moment customers experience friction or intent.
+          </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {items.map((item, i) => (
-            <div
-            key={i}
-            className="group relative rounded-2xl bg-white p-8
-             shadow-sm hover:shadow-xl
-             transition-all duration-300
-             text-gray-900"
-          >        
-          
-              <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
-                {item.title}
-              </h3>
-              <p className="mt-4 text-base font-semibold text-gray-400 leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-          ))}
+        {/* Normal card */}
+        <div className="relative col-span-1 md:col-span-2 rounded-3xl bg-neutral-400 p-12">
+        <RouteIcon className="absolute top-6 right-6 w-15 h-15 text-black opacity-99" />
+          <h3 className="text-4xl font-semibold text-black">
+            Journey Analytics
+          </h3>
+          <p className="mt-6 text-white text-lg md:text-xl font-semibold leading-relaxed">
+            Understand where customers drop off across touchpoints.
+          </p>
         </div>
+
+        {/* Normal card */}
+        <div className="relative col-span-1 md:col-span-2 rounded-3xl bg-neutral-400 p-10">
+        <FileAlertIcon className="absolute top-6 right-6 w-13 h-13 text-black opacity-99" />
+          <h3 className="text-4xl font-semibold text-black">
+            Customer Friction Detection
+          </h3>
+          <p className="mt-6 text-white text-lg md:text-xl font-semibold leading-relaxed">
+            Identify blockers before they impact conversions.
+          </p>
+        </div>
+
+        {/* Wide card */}
+        <div className="relative col-span-1 md:col-span-3 rounded-3xl bg-neutral-400 p-12">
+        <MessageSquareTextIcon className="absolute top-6 right-6 w-15 h-15 text-black opacity-99" />
+          <h3 className="text-5xl font-semibold text-black">
+            Actionable CX Insights
+          </h3>
+          <p className="mt-6 text-lg text-white text-lg md:text-xl font-semibold leading-relaxed">
+            Turn feedback into clear, prioritized actions for CX teams.
+          </p>
+        </div>
+
+        {/* Normal card */}
+        <div className="relative col-span-1 md:col-span-2 rounded-3xl bg-neutral-400 p-12">
+        <ClockAlertIcon className="absolute top-6 right-6 w-12 h-12 text-black opacity-99" />
+          <h3 className="text-4xl font-semibold text-black">
+            Real-time Alerts
+          </h3>
+          <p className="mt-6 text-white text-lg md:text-xl font-semibold leading-relaxed">
+            Get notified instantly when experience degrades.
+          </p>
+        </div>
+
+        {/* Normal card */}
+        <div className="relative col-span-1 md:col-span-2 rounded-3xl bg-neutral-400 p-12">
+        <GlobeLockIcon className="absolute top-6 right-6 w-10 h-10 text-black opacity-99" />
+          <h3 className="text-4xl font-semibold text-black">
+            Enterprise-ready Security
+          </h3>
+          <p className="mt-6 text-white text-lg md:text-xl font-semibold leading-relaxed">
+            Built with privacy, compliance, and scale in mind.
+          </p>
+        </div>
+
       </div>
-    </section>
+    </div>
   );
 }

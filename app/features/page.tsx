@@ -6,11 +6,12 @@ export default function FeaturesPage() {
       <div className="mx-auto max-w-7xl">
 
         {/* HERO */}
-        <section className="mb-20 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Platform Features
+        <section className="mb-10 text-center">
+          <h1 className="text-5xl md:text-9xl font-bold tracking-tight leading-tight">
+            <span className="text-black">Platform</span>{" "}
+            <span className="text-gray-400">Features</span>
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="mt-4 text-xl md:text-2xl text-gray-500 max-w-3xl mx-auto">
             Everything you need to capture decision-level customer feedback,
             uncover friction, and turn insights into growth.
           </p>
@@ -19,86 +20,90 @@ export default function FeaturesPage() {
         {/* CATEGORY 1 */}
         <FeatureSection title="Moment-Based Feedback">
           <FeatureCard
-            icon={<FeedbackIcon />}
+            icon="💬"
             title="Moment-Based Surveys"
-            description="Trigger feedback exactly at checkout, payment failure, delivery, or drop-off moments."
+            description="Capture feedback precisely when it matters most. Deploy micro-surveys at critical journey points. Understand exactly what customers were thinking and feeling in the moment, before
+            context fades."
           />
           <FeatureCard
-            icon={<UserIcon />}
+            icon="👤"
             title="Anonymous & Identified Responses"
-            description="Collect frictionless feedback without login, or identify users when needed."
+            description="Collect frictionless feedback from anonymous visitors to understand broad patterns, then seamlessly
+            identify returning users to connect feedback across sessions. Choose the right balance of privacy and personalization."
           />
           <FeatureCard
-            icon={<QuestionIcon />}
+            icon="❓"
             title="Contextual Question Engine"
-            description="Ask the right question based on user behavior, not static surveys."
+            description="Static surveys miss the mark. Our engine adapts questions based on real-time behavior- page visited, time spent, stage 
+            abandoned- asking different follow-ups for richer insights."
           />
         </FeatureSection>
 
         {/* CATEGORY 2 */}
         <FeatureSection title="Journey Intelligence">
           <FeatureCard
+            icon="🗺️"
             title="Stage-wise Journey Mapping"
-            description="Track every step from landing to purchase to post-delivery."
+            description="Visualize the complete customer trajectory from first click to final delivery. Map every touchpoint to see where users flow 
+            smoothly and where they drop off, all in a single unified view."
           />
           <FeatureCard
+            icon="🔄"
             title="Cross-Stage Analysis"
-            description="Understand how friction in one stage impacts conversions downstream."
+            description="Friction rarely lives in isolation. Analyze how issues in one stage ripple downstream. Connect the dots between early browsing
+            behavior and final conversion outcomes."
           />
           <FeatureCard
+            icon="🔍"
             title="Drop-off Root Cause Detection"
-            description="Automatically surface why users abandon specific stages."
+            description="Stop guessing why users leave. Automatically identify the most common friction points at each abandonment stage.
+            Get surfaced insights, not just raw data dumps."
           />
         </FeatureSection>
 
         {/* CATEGORY 3 */}
         <FeatureSection title="Insights & Action">
           <FeatureCard
-            title="Plain-English Insights"
-            description="No dashboards overload. Clear explanations anyone can understand."
+            icon="💡"
+            title="Plain English Insights"
+            description="Dashboards are for data teams, insights are for everyone. Transform complex behavioral data into clear, actionable summaries
+            that executives can act on immediately. No training required, no charts to decode."
           />
           <FeatureCard
-            title="Real-Time Alerts"
-            description="Get notified the moment performance drops at a tracked stage."
+            icon="🔔"
+            title="Real Time Alerts"
+            description="Respond the moment things go wrong. Get instant notifications when key metrics drop like checkout completion falls, payment failure,
+            or post-purchase satisfaction dips. Address issues before they become revenue crises."
           />
           <FeatureCard
+            icon="💰"
             title="Revenue Impact Indicators"
-            description="See which issues are hurting revenue the most."
+            description="Not all friction is equal. Prioritize fixes based on revenue impact. Identify your biggest cost drivers and recovery 
+            opportunities. Focus effort where it matters most."
           />
         </FeatureSection>
 
         {/* CATEGORY 4 */}
         <FeatureSection title="Enterprise Readiness">
           <FeatureCard
+            icon="⚙️"
             title="Custom Stage Configuration"
-            description="Define your own journey stages — standard or custom."
+            description="Define your own journey stages that match your specific funnel, whether that's subscription sign-up,
+            loan application, or enterprise procurement. Map feedback to the moments that matter for your customers."
           />
           <FeatureCard
+            icon="🧩"
             title="Integrations"
-            description="Plug into your existing analytics, CRM, or data stack."
+            description="Plug insights directly into your existing workflow. Connect seamlessly with analytics platforms, CRM systems, and data warehouses.
+            Enrich customer profiles with feedback data and trigger actions based on sentiment."
           />
           <FeatureCard
+            icon="🛡️"
             title="Security & Compliance"
-            description="Enterprise-grade data security, access control, and compliance readiness."
+            description="SOC 2 compliance, end-to-end encryption, and granular access controls ensure your customer
+            feedback data stays secure. Built for organizations that take data privacy and regulatory requirements seriously."
           />
         </FeatureSection>
-
-        {/* CTA */}
-        <section className="mt-24 text-center">
-          <h3 className="text-2xl font-semibold mb-4">
-            See Uptrackt in Action
-          </h3>
-          <p className="text-gray-600 mb-6">
-            Discover how moment-based feedback changes your growth story.
-          </p>
-          <a
-            href="/request-demo"
-            className="inline-block bg-black text-white px-8 py-3 rounded-md font-medium"
-          >
-            Request a Demo
-          </a>
-        </section>
-
       </div>
     </main>
   );
@@ -114,9 +119,11 @@ function FeatureSection({
   children: React.ReactNode;
 }) {
   return (
-    <section className="mb-24">
-      <h2 className="text-2xl font-semibold mb-10">{title}</h2>
-      <div className="grid md:grid-cols-3 gap-8">{children}</div>
+    <section className="mb-20 last:mb-0">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 tracking-tight">
+        {title}
+      </h2>
+      <div className="grid md:grid-cols-3 gap-6">{children}</div>
     </section>
   );
 }
@@ -131,40 +138,16 @@ function FeatureCard({
   icon?: React.ReactNode;
 }) {
   return (
-    <div className="border rounded-xl p-6 hover:shadow-md transition">
-      {icon && <div className="mb-4">{icon}</div>}
-      <h3 className="text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm">{description}</p>
+    <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+      <div className="flex items-center gap-3 mb-3">
+        {icon && (
+          <div className="text-indigo-600 flex-shrink-0 text-2xl w-8 h-8 flex items-center justify-center">
+            {icon}
+          </div>
+        )}
+        <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
+      </div>
+      <p className="text-gray-600 text-xl leading-relaxed">{description}</p>
     </div>
-  );
-}
-
-/* ---------------- ICONS ---------------- */
-
-function FeedbackIcon() {
-  return (
-    <svg width="24" height="24" fill="none" stroke="#0a66c2" strokeWidth="2">
-      <circle cx="12" cy="12" r="9" />
-      <path d="M8 12h8" />
-    </svg>
-  );
-}
-
-function UserIcon() {
-  return (
-    <svg width="24" height="24" fill="none" stroke="#0a66c2" strokeWidth="2">
-      <circle cx="12" cy="8" r="4" />
-      <path d="M4 20c0-4 16-4 16 0" />
-    </svg>
-  );
-}
-
-function QuestionIcon() {
-  return (
-    <svg width="24" height="24" fill="none" stroke="#0a66c2" strokeWidth="2">
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 17h.01" />
-      <path d="M12 7a3 3 0 0 1 3 3c0 2-3 2-3 4" />
-    </svg>
   );
 }
