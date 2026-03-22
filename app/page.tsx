@@ -9,6 +9,7 @@ import { HeroGeometric } from "./components/ui/shape-landing-hero";
 
 export default function Home() {
   return (
+
     <>
       {/* ================= HERO SECTION with Geometric Background ================= */}
       <HeroGeometric badge="Customer Experience Intelligence">
@@ -38,6 +39,22 @@ export default function Home() {
       <main className="bg-white px-4 sm:px-6">
         <TestimonialsPreview />
       </main>
+
+    <main className="bg-white px-4 sm:px-6">
+      {/* ================= HERO ================= */}
+      <section className="mx-auto max-w-6xl pt-24 pb-28 text-center">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900">
+          Enterprise-ready Customer Experience Intelligence
+        </h1>
+
+        <p className="mt-6 mx-auto max-w-3xl text-base sm:text-lg text-gray-600">
+          Capture customer feedback at critical moments across the retail and
+          e-commerce journey. Identify friction, act faster, and drive
+          measurable growth.
+        </p>
+      </section>
+
+      <TestimonialsPreview />
 
       <section className="py-16">
         <TrustedBy />
@@ -77,6 +94,13 @@ export default function Home() {
         </div>
         <div className="mx-auto mt-12 h-px w-24 bg-gray-300" />
       </section>
+  
+      {/* ================= FAQs ================= */}
+      <FaqSection />
+
+      {/* ================= CTA ================= */}
+      <FinalCTA />
+    </main>
     </>
   );
 }
