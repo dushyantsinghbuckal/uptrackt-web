@@ -1,7 +1,7 @@
 "use client";
 
+import { motion, Variants } from "framer-motion";
 import React from "react";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils"; 
 
 function ElegantShape({
@@ -77,17 +77,17 @@ export function HeroGeometric({
   badge?: string;
   children?: React.ReactNode;
 }) {
-  const fadeUpVariants = {
+  const fadeUpVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
-    visible: (i: number) => ({
+    visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 1,
-        delay: 0.5 + i * 0.2,
-        ease: [0.25, 0.4, 0.25, 1],
+        delay: 0.5,
+        ease: [0.42, 0, 0.58, 1] as any,
       },
-    }),
+    },
   };
 
   return (
@@ -144,7 +144,7 @@ export function HeroGeometric({
             children
           ) : (
             <>
-              <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
+              <motion.div variants={fadeUpVariants} initial="hidden" animate="visible">
                 <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
                   <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
                     Elevate Your
@@ -155,7 +155,7 @@ export function HeroGeometric({
                   </span>
                 </h1>
               </motion.div>
-              <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
+              <motion.div variants={fadeUpVariants} initial="hidden" animate="visible">
               <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide">
                   Crafting exceptional digital experiences through innovative design and cutting-edge technology.
                 </p>

@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
 
-  const country = request.geo?.country || "US";
+  const country = "US";
 
   const response = NextResponse.next();
 
