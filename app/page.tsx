@@ -11,33 +11,28 @@ export default function Home() {
   return (
     <>
       {/* ================= HERO SECTION with Geometric Background ================= */}
-       <HeroGeometric badge="Customer Experience Intelligence">
-       <h1 className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.2] max-w-[1200px] mx-auto text-balance">       Capture customer feedback at critical moments
-        <br />
-       across the journey.
-       </h1>
+      <HeroGeometric badge="Customer Experience Intelligence">
+  <h1 className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.2] max-w-[1200px] mx-auto text-balance">
+    Capture customer feedback at critical moments
+    <br />
+    across the journey.
+  </h1>
 
-        <p className="mt-20 text-4xl md:text-4xl font-bold text-white text-center">
-        Identify friction, act faster, and drive measurable growth.
-        </p>
-        </HeroGeometric>
+  <p className="mt-20 text-2xl md:text-3xl font-semibold text-white text-center max-w-[1200px] mx-auto">
+    Identify friction, act faster, and drive measurable growth.
+  </p>
+</HeroGeometric>
 
         {/* Unified view line */}
-        <div className="mt-18 text-3xl md:text-4xl font-bold tracking-tight text-black max-w-7xl mx-auto">
-          <span className="whitespace-nowrap">We bring together</span>
-          <span className="mx-1 px-3 py-2 rounded-full bg-black text-white font-bold">
-            Feedback
-          </span>
-          <span className="mx-1 text-black">+</span>
-          <span className="mx-1 px-3 py-2 rounded-full bg-black text-white font-bold">
-            Behavior
-          </span>
-          <span className="mx-1 text-black">+</span>
-          <span className="mx-1 px-3 py-2 rounded-full bg-black text-white font-bold">
-            Intent
-          </span>
-          <span className="whitespace-nowrap">under one unified view.</span>
-        </div>
+        <div className="mt-8 text-3xl md:text-4xl font-bold tracking-tight text-gray-300 max-w-7xl mx-auto">
+  <span className="whitespace-nowrap">We bring together </span>
+  <span className="mx-1">Feedback</span>
+  <span className="mx-1">+</span>
+  <span className="mx-1">Behavior</span>
+  <span className="mx-1">+</span>
+  <span className="mx-1">Intent</span>
+  <span className="whitespace-nowrap"> under one unified view.</span>
+       </div>
     
       {/* ================= REST OF THE PAGE (unchanged) ================= */}
       <main className="bg-white px-4 sm:px-6">
@@ -47,8 +42,7 @@ export default function Home() {
       <section className="py-16">
         <TrustedBy />
       </section>
-      <div className="h-24 bg-white" />
-
+     
       <HowItWorksSection />
 
       <section className="py-20">

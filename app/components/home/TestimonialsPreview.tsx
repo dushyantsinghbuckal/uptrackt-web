@@ -1,18 +1,25 @@
-import { GradientBackground } from "../UI/gradient-background";
+import { FloatingPaths } from "../UI/background-paths";
 
 export default function TestimonialsPreview() {
   return (
-    <GradientBackground className="py-24">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="max-w-4xl mx-auto text-4xl text-center md:text-5xl font-semibold leading-tight text-white">
+    <section className="relative min-h-screen w-full overflow-hidden bg-white dark:bg-neutral-950">
+      {/* Animated background paths */}
+      <div className="absolute inset-0 transform translate-y-20">
+        <FloatingPaths position={1} />
+        <FloatingPaths position={-1} />
+      </div>
+
+      {/* Content - NO top padding, h2 has NO top margin */}
+      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-0 pb-16 w-full">
+        <h2 className="max-w-4xl mx-auto text-4xl text-center md:text-5xl font-semibold leading-tight text-gray-900 dark:text-white mt-0">
           That’s how our customers uncover hidden drop-offs, understand true intent,
-          <span className="font-semibold text-gray-400">
+          <span className="font-semibold text-black">
             {" "}and turn feedback into real business outcomes.
           </span>
         </h2>
 
-        {/* Semi‑transparent card with backdrop blur – gradient shines through */}
-        <div className="mt-16 mx-auto max-w-4xl rounded-4xl bg-black/80 backdrop-blur-sm px-12 py-12">
+        {/* Card - minimal top margin */}
+        <div className="mt-6 mx-auto max-w-4xl rounded-4xl bg-black/80 backdrop-blur-sm px-12 py-12 w-full">
           <ul className="space-y-6">
             <li>
               <a
@@ -49,6 +56,6 @@ export default function TestimonialsPreview() {
           </ul>
         </div>
       </div>
-    </GradientBackground>
+    </section>
   );
 }

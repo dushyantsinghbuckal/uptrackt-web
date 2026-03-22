@@ -138,7 +138,7 @@ export function HeroGeometric({
       </div>
 
       <div className="relative z-10 w-full px-16">
-        <div className="w-full max-w-none px-20 text-left">
+      <div className="w-full max-w-[1400px] mx-auto text-center">
           
           {children ? (
             children

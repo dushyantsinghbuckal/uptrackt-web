@@ -17,13 +17,13 @@ export default function Capabilities() {
       <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
 
         {/* Wide card */}
-        <div className="relative col-span-1 md:col-span-3 rounded-3xl bg-neutral-400 p-10">
+        <div className="relative col-span-1 md:col-span-3 rounded-3xl bg-neutral-400 p-12">
         <BookUserIcon className="absolute top-6 right-6 w-15 h-15 text-black opacity-99" />
           <h3 className="text-5xl font-semibold text-black">
             Moment-based Surveys
           </h3>
-          <p className="mt-6 text-lg text-white text-lg md:text-xl font-semibold leading-relaxed">
-            Capture feedback at the exact moment customers experience friction or intent.
+          <p className="mt-6 text-white text-lg md:text-xl font-semibold leading-relaxed">
+          Capture feedback at the exact moment customers experience friction or intent.
           </p>
         </div>
 

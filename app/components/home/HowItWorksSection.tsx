@@ -13,7 +13,7 @@ export default function HowItWorksSection() {
         {/* SUBTEXT / EXPLANATION */}
         <div className="mt-14 max-w-3xl mx-auto space-y-5 text-white text-base md:text-2xl leading-relaxed">
           <p>
-            Capture feedback at the exact moments that shape customer decisions.
+            Capture feedback at the moments that shape customer decisions.
           </p>
           <p>
             Analyze friction, sentiment, and drop-offs as they happen.
