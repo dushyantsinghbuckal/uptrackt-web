@@ -5,7 +5,7 @@ import Capabilities from "./components/home/Capabilities";
 import WhyUptrackt from "./components/home/WhyUptrackt";
 import FaqSection from "./components/FaqSection";
 import FinalCTA from "./components/home/FinalCTA";
-import { HeroGeometric } from "./components/ui/shape-landing-hero";
+import { HeroGeometric } from "./components/UI/shape-landing-hero";
 
 export default function Home() {
   return (
