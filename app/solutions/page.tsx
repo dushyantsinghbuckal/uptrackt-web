@@ -81,7 +81,7 @@ export default function SolutionsPage() {
         </div>
         </section>
 
-        <section className="py-18">
+        <section className="py-20">
       <div className="max-w-6xl mx-auto px-4 relative rounded-[32px] overflow-hidden">
 
 {/* Background Image */}
@@ -94,7 +94,7 @@ export default function SolutionsPage() {
 <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/20" />
 
 {/* Content */}
-<div className="relative px-12 pt-20 pb-15">
+<div className="relative px-12 pt-20 pb-16">
 
 {/* TITLE */}
 <h2 className="leading-tight mb-4">
@@ -125,7 +125,7 @@ export default function SolutionsPage() {
 
       {/* Icon Bubble */}
       <div className="h-8 w-8 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-        <span className="text-white text-xm">✓</span>
+        <span className="text-white text-sm">✓</span>
       </div>
 
       {/* Text */}
