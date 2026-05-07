@@ -102,23 +102,23 @@ export default function TestimonialsPage() {
   href={item.href}
   style={{
     marginTop: "40px",
-    alignSelf: "center",       
+    alignSelf: "center",
     backgroundColor: "#000",
     color: "#fff",
-    padding: "12px 24px",       
-    fontSize: "16px",           
+    padding: "12px 24px",
+    fontSize: "16px",
     fontWeight: 600,
     textDecoration: "none",
     borderRadius: "9999px",
     lineHeight: 1,
-    whiteSpace: "nowrap",     
+    whiteSpace: "nowrap",
   }}
 >
   Explore Full Story
-          </a>
+</a>
 
             </div>
-          ))}
+                  ))}
         </div>
       </div>
     </main>
