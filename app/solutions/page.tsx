@@ -95,7 +95,6 @@ export default function SolutionsPage() {
 
 {/* Content */}
 <div className="relative px-12 pt-20 pb-15">
-<div>
 
 {/* TITLE */}
 <h2 className="leading-tight mb-4">
@@ -113,7 +112,6 @@ export default function SolutionsPage() {
 <p className="text-3xl text-white mb-12 max-w-9xl leading-relaxed">
   Traditional analytics show what happened. We surface why it happened precisely at the stage where intent turns into decision.
 </p>
-</div>
 
 <ul className="space-y-6 text-white">
   {[
