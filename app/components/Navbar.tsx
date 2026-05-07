@@ -29,9 +29,9 @@ export default function Navbar() {
         scrolled ? "border-b border-gray-200 shadow-sm" : ""
       }`}
     >
-      <div className="w-full px-2 md:px-4 h-22 flex items-center justify-between">
+      <div className="w-full px-2 md:px-4 h-22 flex items-center">
         {/* Logo */} 
-        <Link href="/" className="flex items-center gap-0">
+        <Link href="/" className="flex items-center gap-1 shrink-0">
           <img
             src="/file.svg"
             alt="Uptrackt logo"
@@ -43,7 +43,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center ml-auto mr-8 gap-8 text-base md:text-2xl font-medium">
+        <div className="hidden md:flex items-center justify-center flex-1 gap-8 text-base md:text-2xl font-medium">
           {links.map((link) => {
             const isActive =
               link.href === "/"
@@ -67,7 +67,7 @@ export default function Navbar() {
         </div>
 
         {/* CTA + Mobile Toggle */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 shrink-0">
           {/* Desktop CTA */}
           <Link
           href="/request-demo"

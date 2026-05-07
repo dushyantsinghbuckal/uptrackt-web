@@ -15,7 +15,7 @@ export default function FinalCTA() {
 
         <div className="mt-8">
           <a
-            href="#"
+            href="/request-demo"
             className="inline-block rounded-md bg-white px-8 py-4 text-black font-semibold hover:bg-gray-100 transition"
           >
             Request a Demo
