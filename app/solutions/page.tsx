@@ -231,9 +231,9 @@ export default function SolutionsPage() {
 <div className="max-w-6xl mx-auto px-6 text-center">
 
        {/* Heading */}
-       className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight break-words text-center"
-      Designed For Cross Functional Alignment
-    </h2>
+<h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight break-words text-center text-white mb-10">
+  Designed For Cross Functional Alignment
+</h2>
 
     {/* Subheading */}
     <p className="text-4xl text-white max-w-4xl mx-auto mb-16">
