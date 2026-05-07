@@ -25,15 +25,9 @@ export default function Home() {
 </HeroGeometric>
 
         {/* Unified view line */}
-        <div className="mt-8 text-3xl md:text-4xl font-bold tracking-tight text-gray-300 max-w-7xl mx-auto">
-  <span className="whitespace-nowrap">We bring together </span>
-  <span className="mx-1">Feedback</span>
-  <span className="mx-1">+</span>
-  <span className="mx-1">Behavior</span>
-  <span className="mx-1">+</span>
-  <span className="mx-1">Intent</span>
-  <span className="whitespace-nowrap"> under one unified view.</span>
-       </div>
+        <div className="mt-8 px-4 sm:px-6 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-300 max-w-7xl mx-auto text-center leading-tight">
+  We bring together Feedback + Behavior + Intent under one unified view.
+</div>
     
       {/* ================= REST OF THE PAGE (unchanged) ================= */}
       <main className="bg-white px-4 sm:px-6">

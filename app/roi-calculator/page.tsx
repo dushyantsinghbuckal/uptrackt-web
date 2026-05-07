@@ -37,11 +37,11 @@ export default function ROICalculatorPage() {
         
         {/* Header */}
         <div className="max-w-6xl mb-14">
-        <h1 className="text-6xl md:text-7xl font-bold text-gray-900 whitespace-nowrap">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight break-words">
         Conversion Revenue Analysis
          </h1>
 
-         <p className="text-3xl text-gray-500 mt-4">
+         <p className="text-xl sm:text-2xl md:text-3xl text-gray-500 mt-4 leading-relaxed">
       Estimate how friction across checkout, payments, and post-purchase experience may affect your revenue.
     </p>
         </div>
@@ -113,11 +113,11 @@ export default function ROICalculatorPage() {
           </div>
 
           {/* RIGHT SIDE RESULTS */}
-          <div className="bg-gray-600 text-white rounded-3xl p-12 flex flex-col justify-between min-h-[700px]">
+          <div className="bg-gray-600 text-white rounded-3xl p-6 sm:p-8 md:p-12 flex flex-col justify-between min-h-[700px] overflow-hidden">
 
             <div>
 
-              <h2 className="text-6xl font-semibold mb-10">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-10 leading-tight">
                 Revenue Analysis
               </h2>
 
@@ -153,7 +153,7 @@ export default function ROICalculatorPage() {
               Potential Recoverable Revenue
               </p>
 
-                <h3 className="text-5xl font-extrabold text-green-400 mt-4">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 break-words">
                   ${recoverableRevenue.toLocaleString()}
                 </h3>
               </div>

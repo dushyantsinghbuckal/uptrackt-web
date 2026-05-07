@@ -122,9 +122,12 @@ export default function ResourcesPage() {
        <p className="text-gray-600 mt-2 text-xl md:text-2xl max-w-3xl mx-auto">
     Our team can create custom resources tailored to your specific industry and use case.
   </p>
-  <div className="mt-4 bg-black text-white px-8 py-3 rounded-2xl font-semibold text-2xl inline-block shadow-md">
-     Talk to An Expert
-       </div>
+  <Link
+  href="/request-demo"
+  className="mt-4 inline-block bg-black text-white px-8 py-3 rounded-2xl font-semibold text-2xl shadow-md hover:bg-gray-900 transition relative z-10"
+   >
+  Talk to An Expert
+   </Link>
         </div>
       </main>
     </>

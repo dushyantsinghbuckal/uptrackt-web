@@ -90,7 +90,7 @@ export default function TrustedBy() {
             aria-label="Shopify"
           >
             <Image 
-              src="/shopify.svg" 
+              src="/Shopify.svg" 
               alt="Shopify" 
               width={200} 
               height={80} 

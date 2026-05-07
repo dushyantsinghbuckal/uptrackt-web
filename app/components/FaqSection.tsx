@@ -39,12 +39,10 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="mx-auto max-w-6xl px-6 pt-20 pb-6">
-      {/* Top divider */}
-      <div className="mx-auto mb-12 h-px w-24 bg-gray-300" />
-
+    <section className="mx-auto max-w-6xl px-6 pt-10 pb-6">
+      
       {/* Heading */}
-      <h2 className="mb-17 text-center text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 whitespace-nowrap">
+      <h2 className="mb-17 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 leading-tight">
         Common questions before getting started
       </h2>
 
@@ -56,9 +54,9 @@ export default function FaqSection() {
               onClick={() =>
                 setOpenIndex(openIndex === index ? null : index)
               }
-              className="flex w-full items-center justify-between text-left"
+            className="flex w-full items-start justify-between gap-4 text-left"
             >
-              <span className="text-2xl md:text-3xl font-semibold text-gray-900 text-justify">
+              <span className="text-2xl md:text-3xl font-semibold text-gray-900 text-left leading-tight">
                 {faq.question}
               </span>
               <span className="text-2xl text-gray-400">

@@ -29,21 +29,21 @@ export default function Navbar() {
         scrolled ? "border-b border-gray-200 shadow-sm" : ""
       }`}
     >
-      <div className="mx-auto max-w-7xl px-8 h-22 flex items-center justify-between">
+      <div className="w-full px-2 md:px-4 h-22 flex items-center justify-between">
         {/* Logo */} 
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-0">
           <img
             src="/file.svg"
             alt="Uptrackt logo"
             className="h-30 md:h-42 w-auto shrink-0"
           />
-         <span className="-ml-11 text-xl md:text-3xl font-bold leading-none text-gray-900">
+         <span className="text-2xl md:text-4xl font-bold leading-none text-gray-900">
             Uptrackt
           </span>
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8 text-base md:text-2xl font-medium">
+        <div className="hidden md:flex items-center ml-auto mr-8 gap-8 text-base md:text-2xl font-medium">
           {links.map((link) => {
             const isActive =
               link.href === "/"

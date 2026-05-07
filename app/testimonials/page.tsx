@@ -32,6 +32,7 @@ export default function TestimonialsPage() {
         backgroundColor: "#000",
         minHeight: "100vh",
         padding: "120px 24px",
+        overflowX: "hidden",
       }}
     >
       <div
@@ -52,8 +53,8 @@ export default function TestimonialsPage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "40px",
+            gridTemplateColumns: "1fr",
+            gap: "24px",
           }}
         >
           {testimonials.map((item, index) => (
@@ -63,7 +64,7 @@ export default function TestimonialsPage() {
               style={{
                 backgroundColor: index === 1 || index === 2 ? "#cfcfcf" : "#ffffff",
                 border: index % 2 === 0 ? "1px solid #e5e7eb" : "none",
-                padding: "48px",
+                padding: "24px",
                 borderRadius: "6px",
                 display: "flex",
                 flexDirection: "column",
@@ -74,7 +75,7 @@ export default function TestimonialsPage() {
               <div>
                 <h3
                   style={{
-                    fontSize: "30px",
+                    fontSize: "clamp(24px, 5vw, 30px)",
                     fontWeight: 700,
                     color: "#000",
                     marginBottom: "24px",
@@ -104,8 +105,8 @@ export default function TestimonialsPage() {
     alignSelf: "center",       
     backgroundColor: "#000",
     color: "#fff",
-    padding: "14px 32px",       
-    fontSize: "20px",           
+    padding: "12px 24px",       
+    fontSize: "16px",           
     fontWeight: 600,
     textDecoration: "none",
     borderRadius: "9999px",

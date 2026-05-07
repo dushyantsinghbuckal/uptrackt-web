@@ -32,8 +32,6 @@ export default function TestimonialPage() {
 <section
   style={{
     width: "100vw",
-    marginLeft: "calc(50% - 50vw)",
-    marginRight: "calc(50% - 50vw)",
     backgroundColor: "#0E2A47",
     padding: "30px 0",
   }}
@@ -55,13 +53,13 @@ export default function TestimonialPage() {
     >
       Business Context
     </h2>
-    <p style={{ color: "#e5e7eb", textAlign: "justify", fontSize: "21px", lineHeight: 1.8 }}>
+    <p style={{ color: "#e5e7eb", textAlign: "left", fontSize: "21px", lineHeight: 1.8 }}>
     A fast-growing digital commerce platform headquartered in South America had built strong acquisition momentum across Brazil, Colombia, and Chile. 
     Traffic volumes were consistent, paid channels were optimized, and analytics dashboards reflected healthy engagement across landing pages and product 
     discovery flows. On the surface, performance appeared stable. Add-to-cart rates were solid, session durations were competitive, and marketing 
     efficiency remained within target thresholds. However, conversion from evaluation to completed purchase had plateaued.
         </p>
-        <p style={{ color: "#e5e7eb", textAlign: "justify", fontSize: "21px", lineHeight: 1.8 }}>
+        <p style={{ color: "#e5e7eb", textAlign: "left", fontSize: "21px", lineHeight: 1.8 }}>
   Funnel analytics clearly showed where users were exiting- pricing comparisons, checkout steps, and payment selections. However, the underlying 
   reasons were unclear. Behavioral data highlighted drop-off points, yet it did not explain customer hesitation. Operating in a region characterized
   by price sensitivity, installment-based payment preferences, and strong trust considerations around online transactions, even minor friction points
@@ -77,12 +75,11 @@ export default function TestimonialPage() {
       {/* The Challenge */}
       <section
     style={{
-    width: "100vw",
-    marginLeft: "calc(50% - 50vw)",
-    marginRight: "calc(50% - 50vw)",
-    backgroundColor: "#6b7280",
-    padding: "30px 0",
-  }}
+      width: "100%",
+      backgroundColor: "#6b7280",
+      padding: "30px 0",
+      overflowX: "hidden",
+    }}
 >
   <div
     style={{
@@ -101,7 +98,7 @@ export default function TestimonialPage() {
     >
       The Challenge
     </h2>
-    <p style={{ color: "#e5e7eb", textAlign: "justify", fontSize: "21px", lineHeight: 1.8 }}>
+    <p style={{ color: "#e5e7eb", textAlign: "left", fontSize: "21px", lineHeight: 1.8 }}>
     Customer drop-offs were visible across the funnel, but prioritization was unclear. Analytics dashboards highlighted exit points at pricing 
     comparisons, shipping selections, installment options, and checkout steps, yet they failed to explain the motivations behind those exits. Teams 
     could see where users were leaving, but not why. Multiple departments proposed improvements simultaneously. Pricing suggested promotional adjustments. 
@@ -110,13 +107,13 @@ export default function TestimonialPage() {
     filled with experiments that were directionally reasonable but lacked validated impact assumptions. Some changes improved micro-metrics without 
     influencing completed purchases. Others consumed engineering bandwidth without measurable revenue return.
         </p>
-        <p style={{ color: "#e5e7eb", textAlign: "justify", fontSize: "21px", lineHeight: 1.8 }}>
+        <p style={{ color: "#e5e7eb", textAlign: "left", fontSize: "21px", lineHeight: 1.8 }}>
     Debates increasingly replaced data backed decision making. Revenue leakage was acknowledged in leadership discussions, but it was neither precisely
     quantified nor attributed to specific customer concerns. High intent traffic was being acquired efficiently, yet conversion efficiency remained 
     inconsistent. The organization did not need more experimentation, instead it needed clarity. It needed to understand which friction points were materially 
     affecting revenue, which objections were most frequently expressed, and which barriers represented the highest opportunity cost.
         </p>
-        <p style={{ color: "#e5e7eb", textAlign: "justify", fontSize: "21px", lineHeight: 1.8 }}>
+        <p style={{ color: "#e5e7eb", textAlign: "left", fontSize: "21px", lineHeight: 1.8 }}>
         Without that clarity, optimization remained reactive rather than strategic.
         </p>
         </div>
@@ -126,8 +123,6 @@ export default function TestimonialPage() {
       <section
   style={{
     width: "100vw",
-    marginLeft: "calc(50% - 50vw)",
-    marginRight: "calc(50% - 50vw)",
     backgroundColor: "#0E2A47",
     padding: "30px 0",
   }}
@@ -149,7 +144,7 @@ export default function TestimonialPage() {
     >
       Introducing Actionable Feedback Loops
     </h2>
-      <p style={{ color: "#e5e7eb",textAlign: "justify",fontSize: "21px" }}>
+      <p style={{ color: "#e5e7eb",textAlign: "left",fontSize: "21px" }}>
       Structured drop-off feedback was introduced directly at high-intent decision points across the customer journey. Instead of relying solely on 
       behavioral analytics, users were prompted to share the reason behind hesitation at moments of abandonment- pricing pages, shipping selections, 
       payment steps, and form submissions. The goal was not to replace analytics, but to complement it. Funnel data already revealed where users exited. 
@@ -157,7 +152,7 @@ export default function TestimonialPage() {
       as pricing confusion, trust concerns, hidden fees, installment limitations, missing product information, checkout friction, internal approval delays,
       and technical usability barriers. Each category could be measured, tracked, and compared over time.
         </p>
-        <p style={{ color: "#e5e7eb",textAlign: "justify",fontSize: "21px" }}>
+        <p style={{ color: "#e5e7eb",textAlign: "left",fontSize: "21px" }}>
       Within the first month, thousands of structured responses were collected, revealing patterns invisible in traditional funnel reports. Certain 
       objections appeared disproportionately among high-intent users. Others were concentrated within specific traffic segments or device types. For the
       first time, qualitative signals were quantified. Friction was no longer anecdotal- it was categorized, ranked, and tied to specific revenue impacting
@@ -170,11 +165,10 @@ export default function TestimonialPage() {
       {/* The Difference */}
       <section
   style={{
-    width: "100vw",
-    marginLeft: "calc(50% - 50vw)",
-    marginRight: "calc(50% - 50vw)",
+    width: "100%",
     backgroundColor: "#6b7280",
     padding: "30px 0",
+    overflowX: "hidden",
   }}
 >
   <div
@@ -195,20 +189,20 @@ export default function TestimonialPage() {
       The Difference
     </h2>
 
-        <p style={{ color: "#e5e7eb",fontSize: "21px",textAlign: "justify" }}>
+        <p style={{ color: "#e5e7eb",fontSize: "21px",textAlign: "left" }}>
         Drop-off feedback was mapped directly to specific decision points in the customer journey- pricing comparisons, shipping selection, payment 
         confirmation, and final checkout review. Instead of treating abandonment as a generic metric, each exit became traceable to a documented 
         customer reported reason. Every abandonment reason could be grouped, counted, segmented by traffic source and device type, and evaluated based on 
         its potential revenue impact. High-frequency objections were distinguished from high-value objections. This allowed the organization to 
         differentiate between noise and meaningful friction.
         </p>
-        <p style={{ color: "#e5e7eb",textAlign: "justify",fontSize: "21px" }}>
+        <p style={{ color: "#e5e7eb",textAlign: "left",fontSize: "21px" }}>
         Instead of asking "What should we improve next?", teams began asking which customer-reported blocker is affecting the largest share of revenue?
         Optimization shifted from assumption-based experimentation to evidence-based prioritization. Cross-functional discussions became shorter, clearer,
         and more commercially grounded. Product, Growth, Pricing, and CX teams aligned around a shared dataset, one that connected behavioral drop offs 
         with real customer reasoning.
           </p>
-          <p style={{ color: "#e5e7eb",textAlign: "justify",fontSize: "21px" }}>
+          <p style={{ color: "#e5e7eb",textAlign: "left",fontSize: "21px" }}>
           The result was not more experiments, it was smarter ones.
           </p>
 
@@ -218,11 +212,10 @@ export default function TestimonialPage() {
 {/* What Changed */}
 <section
   style={{
-    width: "100vw",
-    marginLeft: "calc(50% - 50vw)",
-    marginRight: "calc(50% - 50vw)",
+    width: "100%",
     backgroundColor: "#6b7280",
     padding: "30px 0",
+    overflowX: "hidden",
   }}
 >
   {/* Shared container */}
@@ -257,7 +250,7 @@ export default function TestimonialPage() {
         style={{
           marginBottom: "16px",
           lineHeight: 1.7,
-          textAlign: "justify",
+          textAlign: "left",
           fontSize: "21px",
         }}
       >
@@ -283,7 +276,7 @@ export default function TestimonialPage() {
         style={{
           marginBottom: "16px",
           lineHeight: 1.7,
-          textAlign: "justify",
+          textAlign: "left",
           fontSize: "21px",
         }}
       >
@@ -308,7 +301,7 @@ export default function TestimonialPage() {
         style={{
           marginBottom: "16px",
           lineHeight: 1.7,
-          textAlign: "justify",
+          textAlign: "left",
           fontSize: "21px",
         }}
       >
@@ -326,11 +319,10 @@ export default function TestimonialPage() {
       {/* Strategic Adjustments */}
       <section
   style={{
-    width: "100vw",
-    marginLeft: "calc(50% - 50vw)",
-    marginRight: "calc(50% - 50vw)",
+    width: "100%",
     backgroundColor: "#6b7280",
     padding: "30px 0",
+    overflowX: "hidden",
   }}
 >
   <div
@@ -350,13 +342,13 @@ export default function TestimonialPage() {
     >
       Strategic Adjustments
     </h2>
-        <p style={{ color: "#e5e7eb",textAlign: "justify",fontSize: "21px" }}>
+        <p style={{ color: "#e5e7eb",textAlign: "left",fontSize: "21px" }}>
         Compliance messaging was elevated specifically for enterprise buyers who required stronger trust and governance signals before committing. 
         Pricing descriptions were clarified to remove ambiguity around feature tiers, contract terms, and total cost implications. Checkout validation 
         errors were simplified, reducing frustration during high-intent purchase moments. Mobile responsiveness gaps were addressed to ensure parity between
         desktop and mobile conversion experiences.
         </p>
-        <p style={{ color: "#e5e7eb",textAlign: "justify",fontSize: "21px" }}>
+        <p style={{ color: "#e5e7eb",textAlign: "left",fontSize: "21px" }}>
         Rather than launching sweeping redesigns, the team implemented surgical, high-impact adjustments mapped to documented hesitation themes. Each 
         refinement was prioritized based on revenue exposure and customer frequency. As a result, iteration cycles shortened, stakeholder debates decreased,
         and optimization efforts became visibly tied to financial performance rather than subjective preference.
@@ -368,8 +360,6 @@ export default function TestimonialPage() {
       <section
   style={{
     width: "100vw",
-    marginLeft: "calc(50% - 50vw)",
-    marginRight: "calc(50% - 50vw)",
     backgroundColor: "#0E2A47",
     padding: "30px 0",
   }}
@@ -391,19 +381,19 @@ export default function TestimonialPage() {
     >
       The Impact
     </h2>
-        <p style={{ color: "#FFFFFF",textAlign: "justify",fontSize: "21px" }}>
+        <p style={{ color: "#FFFFFF",textAlign: "left",fontSize: "21px" }}>
         Within 60 days, measurable improvements were observed across conversion and revenue metrics. Checkout completion rates increased by 18%, driven by
         clearer pricing communication and reduced validation friction. Mobile abandonment declined by 14% after usability bottlenecks were addressed at 
         high-intent steps.
         </p>
-        <p style={{ color: "#FFFFFF",textAlign: "justify",fontSize: "21px" }}>
+        <p style={{ color: "#FFFFFF",textAlign: "left",fontSize: "21px" }}>
         More importantly, optimization efficiency improved. Experiment cycles became shorter, with higher win rates because initiatives were tied to 
         documented customer reasoning rather than assumptions. Cross-functional alignment reduced duplicated efforts, accelerating time-to-impact across 
         product and growth teams. Revenue forecasting also became more predictable. Instead of reacting to unexplained drop-offs, leadership could quantify
         which friction points represented the highest commercial risk. This shifted the organization from reactive optimization to structured, 
         revenue informed prioritization.
         </p>
-        <p style={{ color: "#FFFFFF",textAlign: "justify",fontSize: "21px" }}>
+        <p style={{ color: "#FFFFFF",textAlign: "left",fontSize: "21px" }}>
         Beyond the metrics, decision culture evolved. Customer-reported hesitation became a standing input in roadmap planning discussions. Optimization 
         moved from debate driven to evidence led, and revenue outcomes reflected that discipline.
         </p>

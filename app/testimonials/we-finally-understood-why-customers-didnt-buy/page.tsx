@@ -33,6 +33,8 @@ export default function TestimonialPage() {
           borderRadius: "20px",
           marginTop: "32px",        
           marginBottom: "52px",
+          overflowX: "hidden",
+          boxSizing: "border-box",
         }}
       >
         {/* ================= BUSINESS CONTEXT ================= */}
@@ -85,7 +87,9 @@ export default function TestimonialPage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            display: "flex",
+            flexDirection: "column",
+            gap: "48px",
             gap: "90px",
             marginBottom: "36px",
           }}
@@ -173,15 +177,19 @@ export default function TestimonialPage() {
       <section
         style={{
           backgroundColor: "#000000",
-          padding: "12px 84px",
+          padding: "24px",
           borderRadius: "24px",
           marginBottom: "46px",
-          maxWidth: "1300px",
+          width: "100%",
+          maxWidth: "100%",
+          boxSizing: "border-box",
         }}
       >
         <h2
           style={{
-            fontSize: "48px",
+            fontSize: "clamp(34px, 7vw, 48px)",
+            lineHeight: 1.1,
+            wordBreak: "break-word",
             fontWeight: 800,
             marginBottom: "40px",
             color: "#ffffff",
@@ -191,8 +199,17 @@ export default function TestimonialPage() {
         </h2>
 
         {/* Quote 1 */}
-        <div style={{ backgroundColor: "#0E2A47", padding: "32px", borderRadius: "16px", marginBottom: "24px" }}>
-          <p style={{ fontSize: "24px", lineHeight: "1.7", color: "#ffffff", marginBottom: "14px" }}>
+        <div
+        style={{
+      backgroundColor: "#0E2A47",
+       padding: "24px",
+        borderRadius: "16px",
+       marginBottom: "24px",
+       width: "100%",
+       boxSizing: "border-box",
+       }}
+        >
+          <p style={{ fontSize: "clamp(18px, 4vw, 24px)", lineHeight: "1.7", color: "#ffffff", marginBottom: "14px" }}>
             “The delivery date kept shifting further out once I reached checkout.
             I had already compared options and selected this product,
             but the uncertainty made me reconsider and postpone the purchase.”
@@ -203,8 +220,17 @@ export default function TestimonialPage() {
         </div>
 
         {/* Quote 2 */}
-        <div style={{ backgroundColor: "#ffffff", padding: "32px", borderRadius: "16px", marginBottom: "24px" }}>
-          <p style={{ fontSize: "24px", lineHeight: "1.7", color: "#000000", marginBottom: "14px" }}>
+        <div
+        style={{
+         backgroundColor: "#0E2A47",
+          padding: "24px",
+         borderRadius: "16px",
+          marginBottom: "24px",
+          width: "100%",
+         boxSizing: "border-box",
+         }}
+         >
+          <p style={{ fontSize: "clamp(18px, 4vw, 24px)", lineHeight: "1.7", color: "#000000", marginBottom: "14px" }}>
             “The total price changed at the final step.
             It felt like something was hidden earlier in the process,
             and that immediately reduced my trust in the platform.”
@@ -215,8 +241,17 @@ export default function TestimonialPage() {
         </div>
 
         {/* Quote 3 */}
-        <div style={{ backgroundColor: "#0E2A47", padding: "32px", borderRadius: "16px", marginBottom: "24px" }}>
-          <p style={{ fontSize: "24px", lineHeight: "1.7", color: "#FFFFFF", marginBottom: "14px" }}>
+        <div
+         style={{
+          backgroundColor: "#0E2A47",
+          padding: "24px",
+          borderRadius: "16px",
+          marginBottom: "24px",
+          width: "100%",
+          boxSizing: "border-box",
+         }}
+        >
+          <p style={{ fontSize: "clamp(18px, 4vw, 24px)", lineHeight: "1.7", color: "#FFFFFF", marginBottom: "14px" }}>
             “I prefer paying via a specific method.
             When it wasn’t available at checkout,
             I didn’t feel comfortable switching to another option.”
@@ -227,8 +262,27 @@ export default function TestimonialPage() {
         </div>
 
         {/* Quote 4 */}
-        <div style={{ backgroundColor: "#FFFFFF", padding: "32px", borderRadius: "16px" }}>
-          <p style={{ fontSize: "24px", lineHeight: "1.7", color: "#000000", marginBottom: "14px" }}>
+        <div
+  style={{
+    backgroundColor: "#FFFFFF",
+    padding: "24px",
+    borderRadius: "16px",
+    width: "100%",
+    maxWidth: "100%",
+    boxSizing: "border-box",
+    overflow: "hidden",
+  }}
+     >
+          <p
+  style={{
+    fontSize: "clamp(18px, 4vw, 24px)",
+    lineHeight: "1.7",
+    color: "#000000",
+    marginBottom: "14px",
+    wordBreak: "normal",
+    overflowWrap: "break-word",
+  }}
+>
             “Everything looked good until the last screen.
             But when I saw unexpected charges and longer delivery timelines,
             I decided to abandon and explore alternatives.”

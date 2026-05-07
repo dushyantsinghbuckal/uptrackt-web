@@ -9,7 +9,7 @@ export default function PrivacyPolicyPage() {
         Last updated: {new Date().toLocaleDateString()}
       </p>
 
-      <section className="mt-10 text-justify space-y-8 text-base leading-relaxed">
+      <section className="mt-10 text-left space-y-8 text-base leading-relaxed">
 
         <p>
           Uptrackt (“Uptrackt”, “we”, “our”, or “us”) respects your privacy and is
@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Scope */}
         <div>
-          <h2 className="text-2xl text-justify font-semibold text-gray-900">
+          <h2 className="text-2xl text-left font-semibold text-gray-900">
             1. Scope of This Policy
           </h2>
           <p className="mt-3">
@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Information We Collect */}
         <div>
-          <h2 className="text-2xl text-justify font-semibold text-gray-900">
+          <h2 className="text-2xl text-left font-semibold text-gray-900">
             2. Information We Collect
           </h2>
 
@@ -67,7 +67,7 @@ export default function PrivacyPolicyPage() {
 
         {/* How We Use Information */}
         <div>
-          <h2 className="text-2xl text-justify font-semibold text-gray-900">
+          <h2 className="text-2xl text-left font-semibold text-gray-900">
             3. How We Use Your Information
           </h2>
           <p className="mt-3">
@@ -97,7 +97,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Cookies */}
         <div>
-          <h2 className="text-2xl text-justify font-semibold text-gray-900">
+          <h2 className="text-2xl text-left font-semibold text-gray-900">
             5. Cookies & Tracking Technologies
           </h2>
           <p className="mt-3">
@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Data Sharing */}
         <div>
-          <h2 className="text-2xl text-justify font-semibold text-gray-900">
+          <h2 className="text-2xl text-left font-semibold text-gray-900">
             6. Data Sharing & Disclosure
           </h2>
           <p className="mt-3">
@@ -127,7 +127,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Data Retention */}
         <div>
-          <h2 className="text-2xl text-justify font-semibold text-gray-900">
+          <h2 className="text-2xl text-left font-semibold text-gray-900">
             7. Data Retention
           </h2>
           <p className="mt-3">
@@ -140,7 +140,7 @@ export default function PrivacyPolicyPage() {
 
         {/* International Transfers */}
         <div>
-          <h2 className="text-2xl text-justify font-semibold text-gray-900">
+          <h2 className="text-2xl text-left font-semibold text-gray-900">
             8. International Data Transfers
           </h2>
           <p className="mt-3">
@@ -152,7 +152,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Security */}
         <div>
-          <h2 className="text-2xl text-justify font-semibold text-gray-900">
+          <h2 className="text-2xl text-left font-semibold text-gray-900">
             9. Data Security
           </h2>
           <p className="mt-3">
@@ -165,7 +165,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Public Content */}
         <div>
-          <h2 className="text-2xl text-justify font-semibold text-gray-900">
+          <h2 className="text-2xl text-left font-semibold text-gray-900">
             10. Public Content & User Responsibility
           </h2>
           <p className="mt-3">
@@ -178,7 +178,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Rights */}
         <div>
-          <h2 className="text-2xl text-justify font-semibold text-gray-900">
+          <h2 className="text-2xl text-left font-semibold text-gray-900">
             11. Your Rights
           </h2>
           <p className="mt-3">
@@ -196,7 +196,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Children */}
         <div>
-          <h2 className="text-2xl text-justify font-semibold text-gray-900">
+          <h2 className="text-2xl text-left font-semibold text-gray-900">
             12. Children’s Privacy
           </h2>
           <p className="mt-3">
@@ -207,7 +207,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Changes */}
         <div>
-          <h2 className="text-2xl text-justify font-semibold text-gray-900">
+          <h2 className="text-2xl text-left font-semibold text-gray-900">
             13. Changes to This Policy
           </h2>
           <p className="mt-3">
@@ -220,7 +220,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Contact */}
         <div>
-          <h2 className="text-2xl text-justify font-semibold text-gray-900">
+          <h2 className="text-2xl text-left font-semibold text-gray-900">
             14. Contact Us
           </h2>
           <p className="mt-3">
