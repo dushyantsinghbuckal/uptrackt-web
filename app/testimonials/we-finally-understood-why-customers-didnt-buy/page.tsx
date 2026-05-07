@@ -87,10 +87,8 @@ export default function TestimonialPage() {
         <div
           style={{
             display: "grid",
-            display: "flex",
-            flexDirection: "column",
+           flexDirection: "column",
             gap: "48px",
-            gap: "90px",
             marginBottom: "36px",
           }}
         >
