@@ -65,12 +65,9 @@ export default function RefundPolicyPage() {
           </h2>
           <p className="my-8 text-justify">
           If your refund request is approved, processing timelines may vary depending on your payment provider, banking institution, country,
-          currency conversion process, and payment method used during the transaction.
+          currency conversion process, and payment method used during the transaction. Typical refund processing timelines are:
          </p>
-         <p className="my-7 text-justify">
-    Typical refund processing timelines are:
-  </p>
-
+        
   <ul className="list-disc pl-8 space-y-4 mb-6">
     <li>
     ✔ Credit and debit cards: Typically processed within 5–10
@@ -86,16 +83,13 @@ export default function RefundPolicyPage() {
     <li>
     ✔ Digital wallets and alternative payment providers: Processing
       timelines may vary based on the provider’s internal policies.
-    </li>
-
-    <li>
-      Currency conversion refunds may be subject to exchange rate fluctuations and additional processing delays by financial
-      institutions. Also, certain banks or card issuers may temporarily display the refund as a pending transaction before final settlement.
-    </li>
+    </li>     
      </ul>
           <p className="mt-5">
-          While Uptrackt processes approved refunds promptly, final settlement timelines are controlled by third-party financial institutions and
-    payment networks, which may occasionally result in additional delays outside our control.
+          Currency conversion refunds may be subject to exchange rate fluctuations and additional processing delays by financial
+      institutions. Also, certain banks or card issuers may temporarily display the refund as a pending transaction before final settlement. While Uptrackt
+      processes approved refunds promptly, final settlement timelines are controlled by third-party financial institutions and
+      payment networks, which may occasionally result in additional delays outside our control.
         </p>
         </section>
   
