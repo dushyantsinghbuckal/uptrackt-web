@@ -70,18 +70,18 @@ export default function RefundPolicyPage() {
         
   <ul className="list-disc pl-8 space-y-4 mb-6">
     <li>
-    ✔ Credit and debit cards: Typically processed within 5–10
+    Credit and debit cards: Typically processed within 5–10
       business days.
     </li>
 
     <li>
-    ✔ International wire or bank transfers: Usually processed within
+    International wire or bank transfers: Usually processed within
       7–15 business days depending on intermediary banks and regional
       banking systems.
     </li>
 
     <li>
-    ✔ Digital wallets and alternative payment providers: Processing
+    Digital wallets and alternative payment providers: Processing
       timelines may vary based on the provider’s internal policies.
     </li>     
      </ul>
