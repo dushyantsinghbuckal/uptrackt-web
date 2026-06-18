@@ -8,9 +8,12 @@ import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Uptrackt",
   description: "Enterprise-grade customer experience analytics platform",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
