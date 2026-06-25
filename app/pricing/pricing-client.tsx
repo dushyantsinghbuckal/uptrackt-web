@@ -55,8 +55,7 @@ export default function PricingClient({ symbol, prices }: any) {
       ],
       settings: {
         displayMode: "overlay",
-        theme: "light",
-      },
+            },
     });
   };
 
