@@ -1,58 +1,55 @@
-import { FloatingPaths } from "../UI/background-paths";
+import {getTranslations} from "next-intl/server";
+import {FloatingPaths} from "../UI/background-paths";
 
-export default function TestimonialsPreview() {
+export default async function TestimonialsPreview() {
+  const t = await getTranslations("TestimonialsPreview");
+
+  const items = [
+    {
+      href: "/testimonials/we-finally-understood-why-customers-didnt-buy",
+      text: t("testimonial1")
+    },
+    {
+      href: "/testimonials/captured-feedback-from-anonymous-visitors",
+      text: t("testimonial2")
+    },
+    {
+      href: "/testimonials/plugged-cleanly-into-our-existing-stack",
+      text: t("testimonial3")
+    },
+    {
+      href: "/testimonials/turned-drop-off-feedback-into-revenue-impact",
+      text: t("testimonial4")
+    }
+  ];
+
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-white dark:bg-neutral-950">
-      {/* Animated background paths */}
-      <div className="absolute inset-0 transform translate-y-20">
+      <div className="absolute inset-0 translate-y-20 transform">
         <FloatingPaths position={1} />
         <FloatingPaths position={-1} />
       </div>
 
-      {/* Content - NO top padding, h2 has NO top margin */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-0 pb-16 w-full">
-        <h2 className="max-w-4xl mx-auto text-4xl text-center md:text-5xl font-semibold leading-tight text-gray-900 dark:text-white mt-0">
-          That’s how our customers uncover hidden drop-offs, understand true intent,
-          <span className="font-semibold text-black">
-            {" "}and turn feedback into real business outcomes.
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-16 pt-0">
+        <h2 className="mx-auto mt-0 max-w-4xl text-center text-4xl font-semibold leading-tight text-gray-900 dark:text-white md:text-5xl">
+          {t("intro")}{" "}
+          <span className="font-semibold text-black dark:text-white">
+            {t("introHighlight")}
           </span>
         </h2>
 
-        {/* Card - minimal top margin */}
-        <div className="mt-6 mx-auto max-w-4xl rounded-4xl bg-black/80 backdrop-blur-sm px-12 py-12 w-full">
+        <div className="mx-auto mt-6 w-full max-w-4xl rounded-4xl bg-black/80 px-12 py-12 backdrop-blur-sm">
           <ul className="space-y-6">
-            <li>
-              <a
-                href="/testimonials/we-finally-understood-why-customers-didnt-buy"
-                className="block text-3xl font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:underline underline-offset-4 cursor-pointer"
-              >
-                We Finally Understood Why Customers Didn’t Buy
-              </a>
-            </li>
-            <li>
-              <a
-                href="/testimonials/captured-feedback-from-anonymous-visitors"
-                className="block text-3xl font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:underline underline-offset-4 cursor-pointer"
-              >
-                Captured Feedback From Anonymous Visitors
-              </a>
-            </li>
-            <li>
-              <a
-                href="/testimonials/plugged-cleanly-into-our-existing-stack"
-                className="block text-3xl font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:underline underline-offset-4 cursor-pointer"
-              >
-                Plugged Cleanly Into Our Existing Stack
-              </a>
-            </li>
-            <li>
-              <a
-                href="/testimonials/turned-drop-off-feedback-into-revenue-impact"
-                className="block text-3xl font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:underline underline-offset-4 cursor-pointer"
-              >
-                Turned Drop-Off Feedback Into Revenue Impact
-              </a>
-            </li>
+            {items.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  className="block cursor-pointer text-3xl font-semibold text-white underline-offset-4 transition-all duration-200 hover:-translate-y-0.5 hover:underline"
+                >
+                  {item.text}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

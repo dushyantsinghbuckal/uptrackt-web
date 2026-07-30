@@ -1,133 +1,162 @@
+import type {ReactNode} from "react";
 import Link from "next/link";
-export default function ResourcesPage() {
+import {
+  BarChart3,
+  BookOpen,
+  ClipboardList,
+  FileText,
+  Rocket,
+  Settings,
+  Zap
+} from "lucide-react";
+import {getTranslations} from "next-intl/server";
+
+type ResourceCard = {
+  key:
+    | "playbooks"
+    | "benchmarks"
+    | "updates"
+    | "studies"
+    | "implementation"
+    | "research";
+  icon: ReactNode;
+  iconBg: string;
+  iconColor: string;
+};
+
+const resourceCards: ResourceCard[] = [
+  {
+    key: "playbooks",
+    icon: <BookOpen aria-hidden="true" />,
+    iconBg: "bg-blue-100",
+    iconColor: "text-blue-600"
+  },
+  {
+    key: "benchmarks",
+    icon: <BarChart3 aria-hidden="true" />,
+    iconBg: "bg-cyan-100",
+    iconColor: "text-cyan-600"
+  },
+  {
+    key: "updates",
+    icon: <Rocket aria-hidden="true" />,
+    iconBg: "bg-amber-100",
+    iconColor: "text-amber-600"
+  },
+  {
+    key: "studies",
+    icon: <FileText aria-hidden="true" />,
+    iconBg: "bg-emerald-100",
+    iconColor: "text-emerald-600"
+  },
+  {
+    key: "implementation",
+    icon: <Settings aria-hidden="true" />,
+    iconBg: "bg-purple-100",
+    iconColor: "text-purple-600"
+  },
+  {
+    key: "research",
+    icon: <ClipboardList aria-hidden="true" />,
+    iconBg: "bg-rose-100",
+    iconColor: "text-rose-600"
+  }
+];
+
+export default async function ResourcesPage() {
+  const t = await getTranslations("ResourcesPage");
+
   return (
     <>
-      {/* ===== Black Banner ===== */}
-      <section className="bg-black text-white py-6 px-6 text-center relative overflow-hidden">
-        {/* Subtle pattern overlay for texture */}
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }}></div>
-        
-        <div className="mx-auto max-w-4xl relative">
-          <h1 className="text-5xl md:text-9xl font-semibold tracking-tight">
-            Resources<span className="text-indigo-500">.</span>
+      <section className="relative overflow-hidden bg-black px-6 py-6 text-center text-white">
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
+            backgroundSize: "40px 40px"
+          }}
+        />
+
+        <div className="relative mx-auto max-w-4xl">
+          <h1 className="text-5xl font-semibold tracking-tight md:text-9xl">
+            {t("title")}
+            <span className="text-indigo-500">.</span>
           </h1>
 
-          <p className="mt-8 text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            Practical insight for teams optimizing high impact customer moments
-            across checkout, pricing, payments, and post purchase experience.
+          <p className="mx-auto mt-8 max-w-3xl text-xl leading-relaxed text-gray-300 md:text-2xl">
+            {t("description")}
           </p>
         </div>
       </section>
 
-      {/* ===== Content Below ===== */}
       <main className="mx-auto max-w-7xl px-6 py-24">
-        
-        {/* Featured Tool Section - Makes it pop */}
         <div className="mb-20">
-          <div className="bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-700 rounded-3xl p-10 text-white relative overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full transform translate-x-32 -translate-y-32"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-500 opacity-20 rounded-full transform -translate-x-24 translate-y-24"></div>
-            
-            <div className="relative flex flex-col md:flex-row items-center gap-8">
-              <div className="bg-white/20 p-5 rounded-2xl backdrop-blur">
-                <span className="text-4xl">⚡️</span>
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-700 p-10 text-white">
+            <div className="absolute right-0 top-0 h-64 w-64 translate-x-32 -translate-y-32 rounded-full bg-white opacity-5" />
+            <div className="absolute bottom-0 left-0 h-48 w-48 -translate-x-24 translate-y-24 rounded-full bg-purple-500 opacity-20" />
+
+            <div className="relative flex flex-col items-center gap-8 md:flex-row">
+              <div className="rounded-2xl bg-white/20 p-5 backdrop-blur">
+                <Zap className="h-10 w-10" aria-hidden="true" />
               </div>
+
               <div className="flex-1 text-center md:text-left">
-                <span className="text-indigo-200 text-sm font-semibold uppercase tracking-wider">Benchmark Tool</span>
-                <h2 className="text-3xl md:text-4xl font-bold mt-2">Calculate ROI</h2>
-                <p className="text-indigo-100 text-lg mt-3 max-w-2xl">
-                  See how much revenue you're losing to checkout friction. Get clear, actionable fixes.
+                <span className="text-sm font-semibold uppercase tracking-wider text-indigo-200">
+                  {t("featuredLabel")}
+                </span>
+
+                <h2 className="mt-2 text-3xl font-bold md:text-4xl">
+                  {t("featuredTitle")}
+                </h2>
+
+                <p className="mt-3 max-w-2xl text-lg text-indigo-100">
+                  {t("featuredDescription")}
                 </p>
               </div>
+
               <Link
-               href="/roi-calculator"
-               className="bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg backdrop-blur border border-white/20 whitespace-nowrap hover:bg-white/20 transition"
-               >
-                Calculate your impact →
-               </Link>
+                href="/roi-calculator"
+                className="whitespace-nowrap rounded-xl border border-white/20 bg-white/10 px-8 py-4 text-lg font-semibold backdrop-blur transition hover:bg-white/20"
+              >
+                {t("featuredButton")} →
+              </Link>
             </div>
           </div>
         </div>
 
-       {/* Resource Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-          <Resource
-            icon="📘"
-            iconBg="bg-blue-100"
-            iconColor="text-blue-600"
-            title="CX Playbooks"
-            description="Structured, step by step frameworks for diagnosing and resolving friction at critical revenue stages including checkout 
-            abandonment, pricing hesitation, payment instability, and early churn signals. Each playbook connects customer feedback directly to measurable
-            optimization actions."
-            badges={['Actionable Framework', 'Detailed Templates']}
-          />
-
-          <Resource
-            icon="📊"
-            iconBg="bg-cyan-100"
-            iconColor="text-cyan-600"
-            title="Retail Benchmarks"
-            description="Industry level insight into common abandonment drivers, pricing perception gaps, payment reliability themes, and post purchase friction patterns. Benchmark your performance against broader market behavior and identify structural opportunity areas."
-            badges={['Industry Insights', 'Interactive Dashboard']}
-          />
-
-          <Resource
-            icon="🚀"
-            iconBg="bg-amber-100"
-            iconColor="text-amber-600"
-            title="Product Updates"
-            description="Platform enhancements, new feedback triggers, reporting improvements, and workflow automation capabilities designed to strengthen
-            visibility at commercially sensitive journey moments and accelerate revenue recovery."
-            badges={['Latest Release', 'New Features']}
-          />
-
-          <Resource
-            icon="📑"
-            iconBg="bg-emerald-100"
-            iconColor="text-emerald-600"
-            title="Case Studies"
-            description="Detailed real world examples showing how organizations identified friction, implemented targeted corrective action, and achieved
-            measurable improvements in conversion, trust, and long term retention."
-            badges={['Real Examples', 'Success Stories']}
-          />
-
-          <Resource
-            icon="⚙️"
-            iconBg="bg-purple-100"
-            iconColor="text-purple-600"
-            title="Implementation Guides"
-            description="Practical deployment guidance covering trigger timing, workflow configuration, feedback routing, and cross functional adoption
-            to ensure insight capture strengthens rather than disrupts the customer experience."
-            badges={['Technical Guide', 'Best Practices']}
-          />
-
-          <Resource
-            icon="📋"
-            iconBg="bg-rose-100"
-            iconColor="text-rose-600"
-            title="Research Briefings"
-            description="Executive level summaries highlighting emerging friction trends, behavioral shifts, pricing sensitivity signals, and payment
-            related trust concerns across industries."
-            badges={['Trend Analysis', 'Executive Summary']}
-          />
+        <div className="grid items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {resourceCards.map((card) => (
+            <Resource
+              key={card.key}
+              icon={card.icon}
+              iconBg={card.iconBg}
+              iconColor={card.iconColor}
+              title={t(`cards.${card.key}.title`)}
+              description={t(`cards.${card.key}.description`)}
+              badges={[
+                t(`cards.${card.key}.badge1`),
+                t(`cards.${card.key}.badge2`)
+              ]}
+            />
+          ))}
         </div>
 
-       {/* Bottom CTA Section - static */}
-       <div className="mt-6 text-center p-6 md:p-10 border border-gray-200 rounded-3xl bg-gray-50 max-w-5xl mx-auto">
-       <h3 className="text-3xl md:text-4xl font-bold text-gray-900">Can't find what you're looking for?</h3>
-       <p className="text-gray-600 mt-2 text-xl md:text-2xl max-w-3xl mx-auto">
-    Our team can create custom resources tailored to your specific industry and use case.
-  </p>
-  <Link
-  href="/request-demo"
-  className="mt-4 inline-block bg-black text-white px-8 py-3 rounded-2xl font-semibold text-2xl shadow-md hover:bg-gray-900 transition relative z-10"
-   >
-  Talk to An Expert
-   </Link>
+        <div className="mx-auto mt-6 max-w-5xl rounded-3xl border border-gray-200 bg-gray-50 p-6 text-center md:p-10">
+          <h3 className="text-3xl font-bold text-gray-900 md:text-4xl">
+            {t("ctaTitle")}
+          </h3>
+
+          <p className="mx-auto mt-2 max-w-3xl text-xl text-gray-600 md:text-2xl">
+            {t("ctaDescription")}
+          </p>
+
+          <Link
+            href="/request-demo"
+            className="relative z-10 mt-4 inline-block rounded-2xl bg-black px-8 py-3 text-2xl font-semibold text-white shadow-md transition hover:bg-gray-900"
+          >
+            {t("ctaButton")}
+          </Link>
         </div>
       </main>
     </>
@@ -140,59 +169,47 @@ function Resource({
   iconColor,
   title,
   description,
-  badges = [],
-  showChart = false
+  badges
 }: {
-  icon: string;
+  icon: ReactNode;
   iconBg: string;
   iconColor: string;
   title: string;
   description: string;
-  badges?: string[];
-  showChart?: boolean;
+  badges: string[];
 }) {
   return (
-    <div className="group rounded-2xl border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 bg-white h-full flex flex-col hover:border-transparent relative overflow-hidden">
-      {/* Subtle hover gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:border-transparent hover:shadow-xl">
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
       <div className="relative">
-        {/* Icon and Title side by side */}
-        <div className="flex items-center gap-4 mb-6">
-          <div className={`${iconBg} w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-            <span className={`text-2xl ${iconColor}`}>{icon}</span>
+        <div className="mb-6 flex items-center gap-4">
+          <div
+            className={`${iconBg} ${iconColor} flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-110 [&>svg]:h-7 [&>svg]:w-7`}
+          >
+            {icon}
           </div>
-          <h3 className="font-bold text-gray-900 text-2xl tracking-tight">
+
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900">
             {title}
-          </h3>
+          </h2>
         </div>
 
-       {/* Mini chart visualization for benchmarks card */}
-       {showChart && (
-          <div className="absolute top-0 right-0 flex items-end gap-1 h-12 opacity-50">
-            <div className="w-2 bg-indigo-600 h-6 rounded-t"></div>
-            <div className="w-2 bg-indigo-600 h-8 rounded-t"></div>
-            <div className="w-2 bg-indigo-600 h-10 rounded-t"></div>
-            <div className="w-2 bg-indigo-600 h-7 rounded-t"></div>
-            <div className="w-2 bg-indigo-600 h-4 rounded-t"></div>
-          </div>
-        )}
+        <div className="mt-2 flex flex-wrap gap-2">
+          {badges.map((badge) => (
+            <span
+              key={badge}
+              className="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700"
+            >
+              {badge}
+            </span>
+          ))}
+        </div>
 
-        {/* Badges */}
-        {badges.length > 0 && (
-          <div className="flex flex-wrap gap-2 mt-2">
-            {badges.map((badge, index) => (
-              <span key={index} className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full">
-                {badge}
-              </span>
-            ))}
-          </div>
-        )}
-
-        <p className="mt-4 text-gray-600 leading-relaxed">
+        <p className="mt-4 leading-relaxed text-gray-600">
           {description}
         </p>
-        </div>
-    </div>
+      </div>
+    </article>
   );
 }

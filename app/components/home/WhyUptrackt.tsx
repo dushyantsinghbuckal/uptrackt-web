@@ -1,85 +1,72 @@
-import { Zap, Bug, TrendingUp } from 'lucide-react';
+import {Zap} from "lucide-react";
+import {getTranslations} from "next-intl/server";
 
-export default function WhyUptrackt() {
+export default async function WhyUptrackt() {
+  const t = await getTranslations("WhyUptrackt");
+
+  const cards = [
+    {
+      title: t("actTitle"),
+      description: t("actDescription")
+    },
+    {
+      title: t("frictionTitle"),
+      description: t("frictionDescription")
+    },
+    {
+      title: t("growTitle"),
+      description: t("growDescription")
+    }
+  ];
+
   return (
-    <section className="relative py-1 overflow-hidden bg-white">
-      {/* Subtle background texture */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
+    <section className="relative overflow-hidden bg-white py-1">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.02]"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #000 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
+          backgroundImage:
+            "radial-gradient(circle at 1px 1px, #000 1px, transparent 0)",
+          backgroundSize: "40px 40px"
         }}
       />
 
-      {/* Large geometric accent */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-gray-100 rounded-full blur-3xl opacity-30" />
-      <div className="absolute bottom-20 left-0 w-80 h-80 bg-gray-200 rounded-full blur-3xl opacity-20" />
+      <div className="absolute right-0 top-20 h-96 w-96 rounded-full bg-gray-100 opacity-30 blur-3xl" />
+      <div className="absolute bottom-20 left-0 h-80 w-80 rounded-full bg-gray-200 opacity-20 blur-3xl" />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto">
-        <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900">
-        Why Uptrackt
-        </h2>
-          <p className="mt-8 text-xl md:text-2xl text-gray-500 leading-relaxed max-w-2xl mx-auto">
-          Uptrackt helps teams understand where users struggle in real time, so you can remove friction earlier and improve the customer journey faster.
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-5xl font-bold tracking-tight text-gray-900 md:text-6xl">
+            {t("title")}
+          </h2>
+
+          <p className="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-gray-500 md:text-2xl">
+            {t("description")}
           </p>
         </div>
 
-        {/* Feature grid */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Card 1: Act faster */}
-          <div className="group p-8 bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 rounded-2xl">
-          <div className="flex items-center gap-4 mb-4">
-          <div className="inline-flex p-3 bg-gray-50 rounded-xl text-gray-600">
-          <Zap className="w-7 h-7" strokeWidth={1.5} />
-         </div>
+        <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
+          {cards.map((card) => (
+            <div
+              key={card.title}
+              className="group rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow-md"
+            >
+              <div className="mb-4 flex items-center gap-4">
+                <div className="inline-flex rounded-xl bg-gray-50 p-3 text-gray-600">
+                  <Zap className="h-7 w-7" strokeWidth={1.5} />
+                </div>
 
-         <h3 className="text-2xl font-medium text-gray-900">
-          Act faster
-          </h3>
+                <h3 className="text-2xl font-medium text-gray-900">
+                  {card.title}
+                </h3>
+              </div>
+
+              <p className="leading-relaxed text-gray-500">
+                {card.description}
+              </p>
             </div>
-            <p className="text-gray-500 leading-relaxed">
-              Real‑time insights let your team respond immediately to user feedback, 
-              reducing decision latency and accelerating iteration cycles.
-            </p>
-          </div>
-
-          {/* Card 2: Fix friction earlier */}
-          <div className="group p-8 bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 rounded-2xl">
-          <div className="flex items-center gap-4 mb-4">
-          <div className="inline-flex p-3 bg-gray-50 rounded-xl text-gray-600">
-          <Zap className="w-7 h-7" strokeWidth={1.5} />
-          </div>
-
-          <h3 className="text-2xl font-medium text-gray-900">
-          Fix Friction Earlier
-           </h3>
-           </div>
-            <p className="text-gray-500 leading-relaxed">
-              Identify pain points before they escalate. Our moment‑based approach 
-              highlights friction points early, so you can smooth the user journey.
-            </p>
-          </div>
-
-          {/* Card 3: Grow smarter */}
-          <div className="group p-8 bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 rounded-2xl">
-          <div className="flex items-center gap-4 mb-4">
-          <div className="inline-flex p-3 bg-gray-50 rounded-xl text-gray-600">
-          <Zap className="w-7 h-7" strokeWidth={1.5} />
-          </div>
-
-            <h3 className="text-2xl font-medium text-gray-900">
-            Grow Smarter
-            </h3>
-            </div>
-            <p className="text-gray-500 leading-relaxed">
-              Data‑driven decisions become your competitive advantage. Leverage 
-              insights that matter to scale efficiently and delight users.
-            </p>
-          </div>
+          ))}
         </div>
-       </div>
+      </div>
     </section>
   );
 }

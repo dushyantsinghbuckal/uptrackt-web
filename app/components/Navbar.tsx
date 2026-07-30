@@ -1,25 +1,33 @@
-"use client";
+﻿"use client";
 
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import {usePathname} from "next/navigation";
+import {Menu, X} from "lucide-react";
+import {useTranslations} from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const links = [
-  { name: "Platform", href: "/" },
-  { name: "Solutions", href: "/solutions" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "Testimonials", href: "/testimonials" },
-  { name: "Resources", href: "/resources" },
-];
+  {translationKey: "platform", href: "/"},
+  {translationKey: "solutions", href: "/solutions"},
+  {translationKey: "pricing", href: "/pricing"},
+  {translationKey: "testimonials", href: "/testimonials"},
+  {translationKey: "resources", href: "/resources"}
+] as const;
 
 export default function Navbar() {
   const pathname = usePathname();
+  const t = useTranslations("Navbar");
+
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
+
+    onScroll();
     window.addEventListener("scroll", onScroll);
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -29,21 +37,20 @@ export default function Navbar() {
         scrolled ? "border-b border-gray-200 shadow-sm" : ""
       }`}
     >
-      <div className="w-full px-2 md:px-4 h-22 flex items-center">
-        {/* Logo */} 
-        <Link href="/" className="flex items-center gap-1 shrink-0">
+      <div className="flex h-22 w-full items-center px-2 md:px-4">
+        <Link href="/" className="flex shrink-0 items-center gap-1">
           <img
             src="/file.svg"
             alt="Uptrackt logo"
-            className="h-30 md:h-42 w-auto shrink-0"
+            className="h-30 w-auto shrink-0 md:h-42"
           />
-         <span className="text-2xl md:text-4xl font-bold leading-none text-gray-900">
+
+          <span className="text-2xl font-bold leading-none text-gray-900 md:text-4xl">
             Uptrackt
           </span>
         </Link>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center justify-center flex-1 gap-8 text-base md:text-2xl font-medium">
+        <div className="hidden flex-1 items-center justify-center gap-8 text-base font-medium md:flex md:text-2xl">
           {links.map((link) => {
             const isActive =
               link.href === "/"
@@ -52,73 +59,78 @@ export default function Navbar() {
 
             return (
               <Link
-                key={link.name}
+                key={link.translationKey}
                 href={link.href}
                 className={
                   isActive
-                    ? "text-black font-semibold"
-                    : "text-gray-600 hover:text-black transition-colors"
+                    ? "font-semibold text-black"
+                    : "text-gray-600 transition-colors hover:text-black"
                 }
               >
-                {link.name}
+                {t(link.translationKey)}
               </Link>
             );
           })}
         </div>
 
-        {/* CTA + Mobile Toggle */}
-        <div className="flex items-center gap-4 shrink-0">
-          {/* Desktop CTA */}
-          <Link
-          href="/request-demo"
-         onClick={() => setMobileOpen(false)}
-          className="hidden md:inline-flex items-center justify-center
-          rounded-full bg-black px-4 py-2
-           text-xl font-bold text-white
-           hover:opacity-90 transition"
-           >
-           Let’s Collaborate
-           </Link>
+        <div className="flex shrink-0 items-center gap-2 md:gap-4">
+          <LanguageSwitcher />
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-2xl"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
+          <Link
+            href="/request-demo"
+            onClick={() => setMobileOpen(false)}
+            className="hidden items-center justify-center rounded-full bg-black px-4 py-2 text-xl font-bold text-white transition hover:opacity-90 md:inline-flex"
           >
-            ☰
+            {t("collaborate")}
+          </Link>
+
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-md p-2 text-gray-900 md:hidden"
+            onClick={() => setMobileOpen((current) => !current)}
+            aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? (
+              <X aria-hidden="true" className="h-6 w-6" />
+            ) : (
+              <Menu aria-hidden="true" className="h-6 w-6" />
+            )}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-gray-200 bg-white">
+        <div className="border-t border-gray-200 bg-white md:hidden">
           <div className="flex flex-col gap-4 px-6 py-5 text-lg">
-            {links.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className={
-                  pathname === link.href
-                    ? "text-black font-semibold"
-                    : "text-gray-600"
-                }
-              >
-                {link.name}
-              </Link>
-            ))}
+            {links.map((link) => {
+              const isActive =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(link.href);
 
-            {/* Mobile CTA */}
+              return (
+                <Link
+                  key={link.translationKey}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={
+                    isActive
+                      ? "font-semibold text-black"
+                      : "text-gray-600"
+                  }
+                >
+                  {t(link.translationKey)}
+                </Link>
+              );
+            })}
+
             <Link
               href="/request-demo"
               onClick={() => setMobileOpen(false)}
-              className="rounded-full bg-black px-4 py-2
-               text-center text-white text-xl font-bold
-               hover:opacity-90 transition"
+              className="rounded-full bg-black px-4 py-2 text-center text-xl font-bold text-white transition hover:opacity-90"
             >
-              Let’s Collaborate
+              {t("collaborate")}
             </Link>
           </div>
         </div>

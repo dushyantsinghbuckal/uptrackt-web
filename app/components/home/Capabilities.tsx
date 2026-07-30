@@ -1,87 +1,70 @@
-import { GlobeLockIcon } from "../icons/FeatureIcons";
-import { RouteIcon } from "../icons/FeatureIcons";
-import { ClockAlertIcon } from "../icons/FeatureIcons";
-import { MessageSquareTextIcon } from "../icons/FeatureIcons";
-import { BookUserIcon } from "../icons/FeatureIcons";
-import { FileAlertIcon } from "../icons/FeatureIcons";
-export default function Capabilities() {
+import {getTranslations} from "next-intl/server";
+import {
+  GlobeLockIcon,
+  RouteIcon,
+  ClockAlertIcon,
+  MessageSquareTextIcon,
+  BookUserIcon,
+  FileAlertIcon
+} from "../icons/FeatureIcons";
+
+export default async function Capabilities() {
+  const t = await getTranslations("Capabilities");
+
   return (
-    <div className="max-w-7xl mx-auto px-6">
-      
-      {/* Section title */}
-      <h2 className="text-white text-5xl md:text-6xl font-semibold text-center mb-16">
-        Platform Capabilities
+    <div className="mx-auto max-w-7xl px-6">
+      <h2 className="mb-16 text-center text-5xl font-semibold text-white md:text-6xl">
+        {t("title")}
       </h2>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
-
-        {/* Wide card */}
-        <div className="relative col-span-1 md:col-span-3 rounded-3xl bg-neutral-400 p-12">
-        <BookUserIcon className="absolute top-6 right-6 w-15 h-15 text-black opacity-99" />
-          <h3 className="text-5xl font-semibold text-black">
-            Moment-based Surveys
-          </h3>
-          <p className="mt-6 text-white text-lg md:text-xl font-semibold leading-relaxed">
-          Capture feedback at the exact moment customers experience friction or intent.
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-6">
+        <div className="relative col-span-1 rounded-3xl bg-neutral-400 p-12 md:col-span-3">
+          <BookUserIcon className="absolute right-6 top-6 h-15 w-15 text-black" />
+          <h3 className="text-5xl font-semibold text-black">{t("momentTitle")}</h3>
+          <p className="mt-6 text-lg font-semibold leading-relaxed text-white md:text-xl">
+            {t("momentDescription")}
           </p>
         </div>
 
-        {/* Normal card */}
-        <div className="relative col-span-1 md:col-span-2 rounded-3xl bg-neutral-400 p-12">
-        <RouteIcon className="absolute top-6 right-6 w-15 h-15 text-black opacity-99" />
-          <h3 className="text-4xl font-semibold text-black">
-            Journey Analytics
-          </h3>
-          <p className="mt-6 text-white text-lg md:text-xl font-semibold leading-relaxed">
-            Understand where customers drop off across touchpoints.
+        <div className="relative col-span-1 rounded-3xl bg-neutral-400 p-12 md:col-span-2">
+          <RouteIcon className="absolute right-6 top-6 h-15 w-15 text-black" />
+          <h3 className="text-4xl font-semibold text-black">{t("journeyTitle")}</h3>
+          <p className="mt-6 text-lg font-semibold leading-relaxed text-white md:text-xl">
+            {t("journeyDescription")}
           </p>
         </div>
 
-        {/* Normal card */}
-        <div className="relative col-span-1 md:col-span-2 rounded-3xl bg-neutral-400 p-10">
-        <FileAlertIcon className="absolute top-6 right-6 w-13 h-13 text-black opacity-99" />
-          <h3 className="text-4xl font-semibold text-black">
-            Customer Friction Detection
-          </h3>
-          <p className="mt-6 text-white text-lg md:text-xl font-semibold leading-relaxed">
-            Identify blockers before they impact conversions.
+        <div className="relative col-span-1 rounded-3xl bg-neutral-400 p-10 md:col-span-2">
+          <FileAlertIcon className="absolute right-6 top-6 h-13 w-13 text-black" />
+          <h3 className="text-4xl font-semibold text-black">{t("frictionTitle")}</h3>
+          <p className="mt-6 text-lg font-semibold leading-relaxed text-white md:text-xl">
+            {t("frictionDescription")}
           </p>
         </div>
 
-        {/* Wide card */}
-        <div className="relative col-span-1 md:col-span-3 rounded-3xl bg-neutral-400 p-12">
-        <MessageSquareTextIcon className="absolute top-6 right-6 w-15 h-15 text-black opacity-99" />
-          <h3 className="text-5xl font-semibold text-black">
-            Actionable CX Insights
-          </h3>
-          <p className="mt-6 text-lg text-white text-lg md:text-xl font-semibold leading-relaxed">
-            Turn feedback into clear, prioritized actions for CX teams.
+        <div className="relative col-span-1 rounded-3xl bg-neutral-400 p-12 md:col-span-3">
+          <MessageSquareTextIcon className="absolute right-6 top-6 h-15 w-15 text-black" />
+          <h3 className="text-5xl font-semibold text-black">{t("insightsTitle")}</h3>
+          <p className="mt-6 text-lg font-semibold leading-relaxed text-white md:text-xl">
+            {t("insightsDescription")}
           </p>
         </div>
 
-        {/* Normal card */}
-        <div className="relative col-span-1 md:col-span-2 rounded-3xl bg-neutral-400 p-12">
-        <ClockAlertIcon className="absolute top-6 right-6 w-12 h-12 text-black opacity-99" />
-          <h3 className="text-4xl font-semibold text-black">
-            Real-time Alerts
-          </h3>
-          <p className="mt-6 text-white text-lg md:text-xl font-semibold leading-relaxed">
-            Get notified instantly when experience degrades.
+        <div className="relative col-span-1 rounded-3xl bg-neutral-400 p-12 md:col-span-2">
+          <ClockAlertIcon className="absolute right-6 top-6 h-12 w-12 text-black" />
+          <h3 className="text-4xl font-semibold text-black">{t("alertsTitle")}</h3>
+          <p className="mt-6 text-lg font-semibold leading-relaxed text-white md:text-xl">
+            {t("alertsDescription")}
           </p>
         </div>
 
-        {/* Normal card */}
-        <div className="relative col-span-1 md:col-span-2 rounded-3xl bg-neutral-400 p-12">
-        <GlobeLockIcon className="absolute top-6 right-6 w-10 h-10 text-black opacity-99" />
-          <h3 className="text-4xl font-semibold text-black">
-            Enterprise-ready Security
-          </h3>
-          <p className="mt-6 text-white text-lg md:text-xl font-semibold leading-relaxed">
-            Built with privacy, compliance, and scale in mind.
+        <div className="relative col-span-1 rounded-3xl bg-neutral-400 p-12 md:col-span-2">
+          <GlobeLockIcon className="absolute right-6 top-6 h-10 w-10 text-black" />
+          <h3 className="text-4xl font-semibold text-black">{t("securityTitle")}</h3>
+          <p className="mt-6 text-lg font-semibold leading-relaxed text-white md:text-xl">
+            {t("securityDescription")}
           </p>
         </div>
-
       </div>
     </div>
   );

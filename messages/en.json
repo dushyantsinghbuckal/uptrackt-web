@@ -1,0 +1,172 @@
+{
+  "Navbar": {
+    "platform": "Platform",
+    "solutions": "Solutions",
+    "pricing": "Pricing",
+    "testimonials": "Testimonials",
+    "resources": "Resources",
+    "collaborate": "Let's Collaborate",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "language": "Language",
+    "english": "English",
+    "french": "FranÃ§ais"
+  },
+  "Home": {
+    "badge": "Customer Experience Intelligence",
+    "heroTitleLine1": "Capture customer feedback at critical moments",
+    "heroTitleLine2": "across the journey.",
+    "heroSubtitle": "Identify friction, act faster, and drive measurable growth.",
+    "unifiedView": "We bring together Feedback + Behavior + Intent under one unified view.",
+    "enterpriseTitle": "Enterprise-ready Customer Experience Intelligence",
+    "enterpriseDescription": "Capture customer feedback at critical moments across the retail and e-commerce journey. Identify friction, act faster, and drive measurable growth.",
+    "discoveryTitle": "Not sure where to start?",
+    "discoveryHighlight": "We're here to tailor a solution just for you.",
+    "discoveryDescription": "Book a discovery call, and let's explore the possibilities together.",
+    "collaborate": "Let's Collaborate"
+  },
+  "Capabilities": {
+    "title": "Platform Capabilities",
+    "momentTitle": "Moment-based Surveys",
+    "momentDescription": "Capture feedback at the exact moment customers experience friction or intent.",
+    "journeyTitle": "Journey Analytics",
+    "journeyDescription": "Understand where customers drop off across touchpoints.",
+    "frictionTitle": "Customer Friction Detection",
+    "frictionDescription": "Identify blockers before they impact conversions.",
+    "insightsTitle": "Actionable CX Insights",
+    "insightsDescription": "Turn feedback into clear, prioritized actions for CX teams.",
+    "alertsTitle": "Real-time Alerts",
+    "alertsDescription": "Get notified instantly when experience degrades.",
+    "securityTitle": "Enterprise-ready Security",
+    "securityDescription": "Built with privacy, compliance, and scale in mind."
+  },
+  "FinalCTA": {
+    "title": "Turn Customer Feedback into Growth",
+    "description": "Start capturing insights at the moments that truly matter.",
+    "button": "Request a Demo"
+  },
+  "HowItWorks": {
+    "capture": "CAPTURE",
+    "analyze": "ANALYZE",
+    "act": "ACT",
+    "captureDescription": "Capture feedback at the moments that shape customer decisions.",
+    "analyzeDescription": "Analyze friction, sentiment, and drop-offs as they happen.",
+    "actDescription": "Act instantly with insights your teams can't ignore."
+  },
+  "TestimonialsPreview": {
+    "intro": "That's how our customers uncover hidden drop-offs, understand true intent,",
+    "introHighlight": "and turn feedback into real business outcomes.",
+    "testimonial1": "We Finally Understood Why Customers Didn't Buy",
+    "testimonial2": "Captured Feedback From Anonymous Visitors",
+    "testimonial3": "Plugged Cleanly Into Our Existing Stack",
+    "testimonial4": "Turned Drop-Off Feedback Into Revenue Impact"
+  },
+  "TrustedBy": {
+    "title": "Integrate Your Essential Tools"
+  },
+  "WhyUptrackt": {
+    "title": "Why Uptrackt",
+    "description": "Uptrackt helps teams understand where users struggle in real time, so you can remove friction earlier and improve the customer journey faster.",
+    "actTitle": "Act Faster",
+    "actDescription": "Real-time insights let your team respond immediately to user feedback, reducing decision latency and accelerating iteration cycles.",
+    "frictionTitle": "Fix Friction Earlier",
+    "frictionDescription": "Identify pain points before they escalate. Our moment-based approach highlights friction points early, so you can smooth the user journey.",
+    "growTitle": "Grow Smarter",
+    "growDescription": "Data-driven decisions become your competitive advantage. Leverage insights that matter to scale efficiently and delight users."
+  },
+  "Faq": {
+    "title": "Common questions before getting started",
+    "items": {
+      "item1": {
+        "question": "What is Uptrackt?",
+        "answer": "Uptrackt is a customer decision intelligence platform that helps businesses understand why users hesitate or drop off at critical moments in their digital journey. Instead of relying solely on behavioral analytics, Uptrackt captures structured, in-context feedback at high-intent decision pointsâ€”turning uncertainty into actionable insight. This enables product, growth, and CX teams to prioritize improvements based on real customer reasoning, not assumptions."
+      },
+      "item2": {
+        "question": "What problem does Uptrackt solve?",
+        "answer": "Uptrackt solves the gap between what users do and why they do it. Traditional analytics show where users drop off, but not the reasoning behind their hesitation. Uptrackt captures structured, decision-point feedback that helps teams identify real conversion blockers, prioritize high-impact fixes, and make smarter, revenue-focused optimization decisions."
+      },
+      "item3": {
+        "question": "Where can Uptrackt be used?",
+        "answer": "Uptrackt can be applied across critical customer touchpoints such as pricing pages, checkout flows, sign-up journeys, onboarding sequences, product comparisons, renewals, and application processes. It works wherever users make high-intent decisions, especially at moments where hesitation, drop-off, or friction directly impacts conversion and revenue."
+      },
+      "item4": {
+        "question": "Does Uptrackt require users to log in or share personal data?",
+        "answer": "No. Uptrackt works without forcing user logins or collecting personally identifiable information. Feedback is gathered in a lightweight, privacy-conscious way that encourages honest responses while maintaining compliance standards. This approach increases participation rates and improves the quality and reliability of insights without disrupting the user experience."
+      },
+      "item5": {
+        "question": "What kind of insights does Uptrackt provide?",
+        "answer": "Uptrackt surfaces structured insights such as common hesitation themes, conversion blockers, trust gaps, pricing confusion, usability friction, and drop-off triggers at key decision points. It helps teams understand not just where users leave, but whyâ€”enabling clearer prioritization and smarter optimization decisions across the funnel."
+      },
+      "item6": {
+        "question": "Is Uptrackt difficult to implement or use?",
+        "answer": "No. Uptrackt is designed to be easy to adopt and manage, without requiring deep technical expertise. The interface is intuitive and built for cross-functional use, meaning product, growth, CX, and leadership teams can access insights without relying on analysts or developers. Structured reports, categorized hesitation themes, and prioritized friction points are presented in a clear format that supports fast decision-making."
+      }
+    }
+  },
+  "Footer": {
+    "taglineLine1": "Insights where",
+    "taglineLine2": "decisions happen.",
+    "product": "Product",
+    "platform": "Platform",
+    "howItWorks": "How It Works",
+    "capabilities": "Platform Capabilities",
+    "features": "Features",
+    "about": "About",
+    "resources": "Resources",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "refund": "Refund Policy",
+    "getStarted": "Get Started",
+    "getStartedDescription": "See how Uptrackt helps you turn feedback into growth.",
+    "copyright": "Â© 2026 Uptrackt. All rights reserved."
+  },
+  "ResourcesPage": {
+    "title": "Resources",
+    "description": "Practical insight for teams optimizing high-impact customer moments across checkout, pricing, payments, and the post-purchase experience.",
+    "featuredLabel": "Benchmark Tool",
+    "featuredTitle": "Calculate ROI",
+    "featuredDescription": "See how much revenue you are losing to checkout friction. Get clear, actionable fixes.",
+    "featuredButton": "Calculate your impact",
+    "cards": {
+      "playbooks": {
+        "title": "CX Playbooks",
+        "description": "Structured, step-by-step frameworks for diagnosing and resolving friction at critical revenue stages, including checkout abandonment, pricing hesitation, payment instability, and early churn signals. Each playbook connects customer feedback directly to measurable optimization actions.",
+        "badge1": "Actionable Framework",
+        "badge2": "Detailed Templates"
+      },
+      "benchmarks": {
+        "title": "Retail Benchmarks",
+        "description": "Industry-level insight into common abandonment drivers, pricing perception gaps, payment reliability themes, and post-purchase friction patterns. Benchmark your performance against broader market behavior and identify structural opportunity areas.",
+        "badge1": "Industry Insights",
+        "badge2": "Interactive Dashboard"
+      },
+      "updates": {
+        "title": "Product Updates",
+        "description": "Platform enhancements, new feedback triggers, reporting improvements, and workflow automation capabilities designed to strengthen visibility at commercially sensitive journey moments and accelerate revenue recovery.",
+        "badge1": "Latest Release",
+        "badge2": "New Features"
+      },
+      "studies": {
+        "title": "Case Studies",
+        "description": "Detailed real-world examples showing how organizations identified friction, implemented targeted corrective action, and achieved measurable improvements in conversion, trust, and long-term retention.",
+        "badge1": "Real Examples",
+        "badge2": "Success Stories"
+      },
+      "implementation": {
+        "title": "Implementation Guides",
+        "description": "Practical deployment guidance covering trigger timing, workflow configuration, feedback routing, and cross-functional adoption to ensure insight capture strengthens rather than disrupts the customer experience.",
+        "badge1": "Technical Guide",
+        "badge2": "Best Practices"
+      },
+      "research": {
+        "title": "Research Briefings",
+        "description": "Executive-level summaries highlighting emerging friction trends, behavioral shifts, pricing sensitivity signals, and payment-related trust concerns across industries.",
+        "badge1": "Trend Analysis",
+        "badge2": "Executive Summary"
+      }
+    },
+    "ctaTitle": "Cannot find what you are looking for?",
+    "ctaDescription": "Our team can create custom resources tailored to your specific industry and use case.",
+    "ctaButton": "Talk to an Expert"
+  }
+}

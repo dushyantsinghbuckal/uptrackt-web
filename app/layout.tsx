@@ -1,32 +1,42 @@
-import "./globals.css";
+﻿import "./globals.css";
 
-import type { Metadata } from "next";
+import type {Metadata} from "next";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { Geist } from "next/font/google";
-import { cn } from "@/lib/utils";
+import {Geist} from "next/font/google";
+import {cn} from "@/lib/utils";
+import {NextIntlClientProvider} from "next-intl";
+import {getLocale, getMessages} from "next-intl/server";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans"
+});
 
 export const metadata: Metadata = {
   title: "Uptrackt",
   description: "Enterprise-grade customer experience analytics platform",
   icons: {
-    icon: "/favicon.ico",
-  },
+    icon: "/favicon.ico"
+  }
 };
 
-export default function RootLayout({
-  children,
-}: {
+export default async function RootLayout({
+  children
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang={locale} className={cn("font-sans", geist.variable)}>
       <body className="antialiased text-gray-900">
-        <Navbar />
-        {children}
-        <Footer />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Navbar />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
