@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+audit-i18n.mjs
+bundle-3a.mjs
+bundle-5-pages.txt
+bundle-solutions.mjs
+bundle-testimonials-main.mjs
+fix-platform-json.mjs
+repair-translations.mjs
+translate-pricing.mjs
