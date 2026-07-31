@@ -1,48 +1,97 @@
 "use client";
 
 import Script from "next/script";
-import { useState } from "react";
+import {Check} from "lucide-react";
+import {useTranslations} from "next-intl";
+import {useState} from "react";
 
 declare global {
   interface Window {
-    Paddle?: any;
+    Paddle?: {
+      Initialize: (settings: {token: string}) => void;
+      Checkout: {
+        open: (settings: {
+          items: Array<{
+            priceId: string;
+            quantity: number;
+          }>;
+          settings: {
+            displayMode: "overlay";
+          };
+        }) => void;
+      };
+    };
   }
 }
 
-const PADDLE_CLIENT_TOKEN = "live_6021e37ca2455040e43df95e1f9";
+type BillingCycle = "monthly" | "yearly";
+type PaidPlan = "starter" | "growth" | "scale";
+type PlanKey = PaidPlan | "custom";
 
-const PADDLE_PRICE_IDS = {
+type PricingValues = {
+  starter: Record<BillingCycle, number | string>;
+  growth: Record<BillingCycle, number | string>;
+  scale: Record<BillingCycle, number | string>;
+};
+
+type PricingClientProps = {
+  symbol: string;
+  prices: PricingValues;
+};
+
+const PADDLE_CLIENT_TOKEN =
+  "live_6021e37ca2455040e43df95e1f9";
+
+const PADDLE_PRICE_IDS: Record<
+  PaidPlan,
+  Record<BillingCycle, string>
+> = {
   starter: {
     monthly: "pri_01kvye7sgjxa4rjbjbhev9pwnh",
-    yearly: "pri_01kvyemwe7v3s5wpzanbyr3a4b",
+    yearly: "pri_01kvyemwe7v3s5wpzanbyr3a4b"
   },
   growth: {
     monthly: "pri_01kvyeadjav7d47e0h335x5w3w",
-    yearly: "pri_01kvyejn99eg1vxfbwf6j4yhhx",
+    yearly: "pri_01kvyejn99eg1vxfbwf6j4yhhx"
   },
   scale: {
     monthly: "pri_01kvyec21hwqqt1g8b39aq0q04",
-    yearly: "pri_01kvyefjmtgzk2scp78bdt4rrq",
-  },
+    yearly: "pri_01kvyefjmtgzk2scp78bdt4rrq"
+  }
 };
 
-export default function PricingClient({ symbol, prices }: any) {
-  const [billing, setBilling] = useState<"monthly" | "yearly">("monthly");
+const planFeatureCounts: Record<PlanKey, number> = {
+  starter: 5,
+  growth: 5,
+  scale: 7,
+  custom: 5
+};
+
+export default function PricingClient({
+  symbol,
+  prices
+}: PricingClientProps) {
+  const t = useTranslations("Pricing");
+
+  const [billing, setBilling] =
+    useState<BillingCycle>("monthly");
   const [paddleReady, setPaddleReady] = useState(false);
 
-  const initializePaddle = () => {
-    if (!window.Paddle) return;
+  function initializePaddle() {
+    if (!window.Paddle) {
+      return;
+    }
 
     window.Paddle.Initialize({
-      token: PADDLE_CLIENT_TOKEN,
+      token: PADDLE_CLIENT_TOKEN
     });
 
     setPaddleReady(true);
-  };
+  }
 
-  const openCheckout = (plan: "starter" | "growth" | "scale") => {
+  function openCheckout(plan: PaidPlan) {
     if (!window.Paddle || !paddleReady) {
-      alert("Payment system is loading. Please try again in a few seconds.");
+      window.alert(t("paymentLoading"));
       return;
     }
 
@@ -50,14 +99,22 @@ export default function PricingClient({ symbol, prices }: any) {
       items: [
         {
           priceId: PADDLE_PRICE_IDS[plan][billing],
-          quantity: 1,
-        },
+          quantity: 1
+        }
       ],
       settings: {
-        displayMode: "overlay",
-            },
+        displayMode: "overlay"
+      }
     });
-  };
+  }
+
+  function getFeatures(plan: PlanKey) {
+    return Array.from(
+      {length: planFeatureCounts[plan]},
+      (_, index) =>
+        t(`plans.${plan}.features.feature${index + 1}`)
+    );
+  }
 
   return (
     <>
@@ -68,195 +125,159 @@ export default function PricingClient({ symbol, prices }: any) {
       />
 
       <main className="mx-auto max-w-7xl px-6 py-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Choose your Growth Plan
+        <h1 className="mb-4 text-4xl font-bold text-gray-900">
+          {t("title")}
         </h1>
 
-        <p className="text-lg text-gray-600 mb-10">
-          Simple plans for understanding your customer journey. No complexity, no noise.
+        <p className="mb-10 text-lg text-gray-600">
+          {t("subtitle")}
         </p>
 
-        <div className="flex justify-center mb-12">
-          <div className="flex items-center gap-2 border rounded-full p-1">
+        <div className="mb-12 flex justify-center">
+          <div className="flex items-center gap-2 rounded-full border p-1">
             <button
+              type="button"
               onClick={() => setBilling("monthly")}
-              className={`px-4 py-1 rounded-full text-sm ${
-                billing === "monthly" ? "bg-black text-white" : "text-gray-600"
+              aria-pressed={billing === "monthly"}
+              className={`rounded-full px-4 py-1 text-sm ${
+                billing === "monthly"
+                  ? "bg-black text-white"
+                  : "text-gray-600"
               }`}
             >
-              Monthly
+              {t("monthly")}
             </button>
 
             <button
+              type="button"
               onClick={() => setBilling("yearly")}
-              className={`px-3 py-1 rounded-full text-sm ${
-                billing === "yearly" ? "bg-black text-white" : "text-gray-600"
+              aria-pressed={billing === "yearly"}
+              className={`rounded-full px-3 py-1 text-sm ${
+                billing === "yearly"
+                  ? "bg-black text-white"
+                  : "text-gray-600"
               }`}
             >
-              Yearly
+              {t("yearly")}
             </button>
           </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <div className="border-1 border-black rounded-xl p-6 relative bg-white flex flex-col">
-            <h2 className="text-xl font-semibold mb-2">Starter</h2>
-            <p className="text-gray-600 mb-4">Fix the biggest problem first</p>
+        <div className="grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {(["starter", "growth", "scale"] as PaidPlan[]).map(
+            (plan) => (
+              <article
+                key={plan}
+                className="relative flex flex-col rounded-xl border border-black bg-white p-6"
+              >
+                <h2 className="mb-2 text-xl font-semibold">
+                  {t(`plans.${plan}.name`)}
+                </h2>
 
-            <p className="text-3xl font-bold text-gray-900 mb-6">
-              {billing === "monthly"
-                ? `${symbol}${prices.starter.monthly}`
-                : `${symbol}${prices.starter.yearly}`}
-              <span className="text-sm font-normal">
-                {billing === "monthly" ? " / month" : " / year"}
-              </span>
+                <p className="mb-4 text-gray-600">
+                  {t(`plans.${plan}.description`)}
+                </p>
+
+                <p className="mb-6 text-3xl font-bold text-gray-900">
+                  {symbol}
+                  {prices[plan][billing]}
+
+                  <span className="text-sm font-normal">
+                    {billing === "monthly"
+                      ? t("perMonth")
+                      : t("perYear")}
+                  </span>
+                </p>
+
+                <p className="mb-2 text-lg font-medium">
+                  {t("bestFor")}
+                </p>
+
+                <p className="mb-4 text-lg font-semibold text-gray-700">
+                  {t(`plans.${plan}.audience`)}
+                </p>
+
+                <div className="flex-grow">
+                  <ul className="mb-4 space-y-2 text-base text-gray-800">
+                    {getFeatures(plan).map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-start gap-2"
+                      >
+                        <Check
+                          className="mt-0.5 h-5 w-5 shrink-0"
+                          aria-hidden="true"
+                        />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <p className="text-sm italic text-gray-600">
+                    &ldquo;{t(`plans.${plan}.quote`)}&rdquo;
+                  </p>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => openCheckout(plan)}
+                  className="mt-6 inline-flex justify-center rounded-md bg-black px-6 py-3 font-medium text-white transition hover:bg-gray-800"
+                >
+                  {t(`plans.${plan}.button`)}
+                </button>
+              </article>
+            )
+          )}
+
+          <article className="relative flex flex-col rounded-xl border border-black bg-white p-6">
+            <h2 className="mb-2 text-xl font-semibold">
+              {t("plans.custom.name")}
+            </h2>
+
+            <p className="mb-4 text-gray-600">
+              {t("plans.custom.description")}
             </p>
 
-            <p className="text-lg font-medium mb-2">Best for</p>
-            <p className="text-lg font-semibold text-gray-700 mb-4">
-              Early-stage brands & small teams
+            <p className="mb-6 text-2xl font-bold">
+              {t("plans.custom.price")}
             </p>
 
-            <div className="flex-grow">
-              <ul className="text-base text-gray-800 space-y-2 mb-4">
-                <li>✓ Any 2 journey stages</li>
-                <li>✓ Anonymous feedback capture</li>
-                <li>✓ Contextual questions</li>
-                <li>✓ 10 insights / month</li>
-                <li>✓ Monthly summary</li>
-              </ul>
-
-              <p className="text-sm italic text-gray-600">
-                “Customers are dropping off. We need to know why, quickly.”
-              </p>
-            </div>
-
-            <button
-              onClick={() => openCheckout("starter")}
-              className="mt-6 inline-flex justify-center rounded-md bg-black px-6 py-3 text-white font-medium hover:bg-gray-800 transition"
-            >
-              Get Starter
-            </button>
-          </div>
-
-          <div className="border-1 border-black rounded-xl p-6 relative bg-white flex flex-col">
-            <h2 className="text-xl font-semibold mb-2">Growth</h2>
-            <p className="text-gray-600 mb-4">
-              See how your journey truly performs
+            <p className="mb-2 text-lg font-medium">
+              {t("bestFor")}
             </p>
 
-            <p className="text-3xl font-bold text-gray-900 mb-6">
-              {billing === "monthly"
-                ? `${symbol}${prices.growth.monthly}`
-                : `${symbol}${prices.growth.yearly}`}
-              <span className="text-sm font-normal">
-                {billing === "monthly" ? " / month" : " / year"}
-              </span>
-            </p>
-
-            <p className="text-lg font-medium mb-2">Best for</p>
-            <p className="text-lg font-semibold text-gray-700 mb-4">
-              Growing brands & CX teams
-            </p>
-
-            <div className="flex-grow">
-              <ul className="text-base text-gray-800 space-y-2 mb-4">
-                <li>✓ 5 journey stages</li>
-                <li>✓ Cross-stage comparison</li>
-                <li>✓ AI root-cause analysis</li>
-                <li>✓ 50 insights / month</li>
-                <li>✓ Revenue signals</li>
-              </ul>
-
-              <p className="text-sm italic text-gray-600">
-                “Problems don’t exist in isolation. We need to see how stages affect each other.”
-              </p>
-            </div>
-
-            <button
-              onClick={() => openCheckout("growth")}
-              className="mt-6 inline-flex justify-center rounded-md bg-black px-6 py-3 text-white font-medium hover:bg-gray-800 transition"
-            >
-              Get Growth
-            </button>
-          </div>
-
-          <div className="border-1 border-black rounded-xl p-6 relative bg-white flex flex-col">
-            <h2 className="text-xl font-semibold mb-2">Scale</h2>
-            <p className="text-gray-600 mb-4">
-              Full-funnel decision intelligence
-            </p>
-
-            <p className="text-3xl font-bold text-gray-900 mb-6">
-              {billing === "monthly"
-                ? `${symbol}${prices.scale.monthly}`
-                : `${symbol}${prices.scale.yearly}`}
-              <span className="text-sm font-normal">
-                {billing === "monthly" ? " / month" : " / year"}
-              </span>
-            </p>
-
-            <p className="text-lg font-medium mb-2">Best for</p>
-            <p className="text-lg font-semibold text-gray-700 mb-4">
-              Serious D2C & marketplaces
+            <p className="mb-4 text-lg font-semibold text-gray-700">
+              {t("plans.custom.audience")}
             </p>
 
             <div className="flex-grow">
-              <ul className="text-base text-gray-800 space-y-2 mb-4">
-                <li>✓ Everything in Growth</li>
-                <li>✓ Cover all 10 journey stages</li>
-                <li>✓ End-to-end visibility</li>
-                <li>✓ Unlimited insights</li>
-                <li>✓ Predictive signals</li>
-                <li>✓ Priority support</li>
-                <li>✓ Quarterly journey truth review</li>
+              <ul className="mb-4 space-y-2 text-base text-gray-800">
+                {getFeatures("custom").map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-start gap-2"
+                  >
+                    <Check
+                      className="mt-0.5 h-5 w-5 shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span>{feature}</span>
+                  </li>
+                ))}
               </ul>
 
               <p className="text-sm italic text-gray-600">
-                “We own the complete journey. We need the full truth.”
-              </p>
-            </div>
-
-            <button
-              onClick={() => openCheckout("scale")}
-              className="mt-6 inline-flex justify-center rounded-md bg-black px-6 py-3 text-white font-medium hover:bg-gray-800 transition"
-            >
-              Get Scale
-            </button>
-          </div>
-
-          <div className="border-1 border-black rounded-xl p-6 relative bg-white flex flex-col">
-            <h2 className="text-xl font-semibold mb-2">Custom</h2>
-            <p className="text-gray-600 mb-4">Built around your business</p>
-
-            <p className="text-2xl font-bold mb-6">Custom pricing</p>
-
-            <p className="text-lg font-medium mb-2">Best for</p>
-            <p className="text-lg font-semibold text-gray-700 mb-4">
-              Enterprise & complex journeys
-            </p>
-
-            <div className="flex-grow">
-              <ul className="text-base text-gray-800 space-y-2 mb-4">
-                <li>✓ Unlimited stages</li>
-                <li>✓ Advanced insights</li>
-                <li>✓ Custom reporting</li>
-                <li>✓ Integrations</li>
-                <li>✓ SLA & compliance</li>
-              </ul>
-
-              <p className="text-sm italic text-gray-600">
-                “Our journey is complex. We need it tailored.”
+                &ldquo;{t("plans.custom.quote")}&rdquo;
               </p>
             </div>
 
             <a
               href="/contact?plan=custom"
-              className="mt-6 inline-flex justify-center rounded-md bg-black px-6 py-3 text-white font-medium hover:bg-gray-800 transition"
+              className="mt-6 inline-flex justify-center rounded-md bg-black px-6 py-3 font-medium text-white transition hover:bg-gray-800"
             >
-              Contact Sales
+              {t("plans.custom.button")}
             </a>
-          </div>
+          </article>
         </div>
       </main>
     </>

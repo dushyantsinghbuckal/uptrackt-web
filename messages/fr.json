@@ -120,6 +120,18 @@
     "getStartedDescription": "Découvrez comment Uptrackt vous aide à transformer les retours en croissance.",
     "copyright": "© 2026 Uptrackt. Tous droits réservés."
   },
+  "PlatformPage": {
+    "hero": {
+      "title1": "Comprendre les comportements",
+      "title2": "Stimuler la croissance",
+      "description": "Une plateforme d'intelligence de l'expérience client conçue pour les équipes du commerce de détail et du e-commerce afin de détecter les points de friction, comprendre les comportements et agir rapidement."
+    },
+    "trust": {
+      "integration": "S'intègre à plus de 20 plateformes",
+      "events": "Plus de 2 000 événements traités chaque mois",
+      "uptime": "SLA de disponibilité de 97 %"
+    }
+  },
   "ResourcesPage": {
     "title": "Ressources",
     "description": "Des informations pratiques pour les équipes qui optimisent les moments clés du parcours client, du paiement et de la tarification jusqu'à l'expérience après-achat.",
@@ -168,5 +180,211 @@
     "ctaTitle": "Vous ne trouvez pas ce que vous recherchez ?",
     "ctaDescription": "Notre équipe peut créer des ressources personnalisées adaptées à votre secteur et à votre cas d'utilisation.",
     "ctaButton": "Parler à un expert"
+  },
+  "Pricing": {
+    "title": "Choisissez votre formule de croissance",
+    "subtitle": "Des formules simples pour comprendre votre parcours client, sans complexité ni distractions.",
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "perMonth": " / mois",
+    "perYear": " / an",
+    "bestFor": "Idéal pour",
+    "paymentLoading": "Le système de paiement est en cours de chargement. Veuillez réessayer dans quelques secondes.",
+    "plans": {
+      "starter": {
+        "name": "Démarrage",
+        "description": "Résolvez d'abord le problème le plus important",
+        "audience": "Jeunes marques et petites équipes",
+        "features": {
+          "feature1": "2 étapes du parcours au choix",
+          "feature2": "Collecte de retours anonymes",
+          "feature3": "Questions contextuelles",
+          "feature4": "10 informations exploitables par mois",
+          "feature5": "Synthèse mensuelle"
+        },
+        "quote": "Les clients abandonnent leur parcours. Nous devons rapidement comprendre pourquoi.",
+        "button": "Choisir Démarrage"
+      },
+      "growth": {
+        "name": "Croissance",
+        "description": "Comprenez les performances réelles de votre parcours",
+        "audience": "Marques en croissance et équipes CX",
+        "features": {
+          "feature1": "5 étapes du parcours",
+          "feature2": "Comparaison entre les étapes",
+          "feature3": "Analyse des causes profondes par l'IA",
+          "feature4": "50 informations exploitables par mois",
+          "feature5": "Signaux liés au chiffre d'affaires"
+        },
+        "quote": "Les problèmes ne sont pas isolés. Nous devons comprendre comment les étapes s'influencent.",
+        "button": "Choisir Croissance"
+      },
+      "scale": {
+        "name": "Échelle",
+        "description": "Intelligence décisionnelle sur l'ensemble du parcours",
+        "audience": "Marques D2C ambitieuses et places de marché",
+        "features": {
+          "feature1": "Tout le contenu de la formule Croissance",
+          "feature2": "Les 10 étapes du parcours",
+          "feature3": "Visibilité de bout en bout",
+          "feature4": "Informations exploitables illimitées",
+          "feature5": "Signaux prédictifs",
+          "feature6": "Assistance prioritaire",
+          "feature7": "Analyse trimestrielle du parcours"
+        },
+        "quote": "Nous gérons l'ensemble du parcours. Nous avons besoin d'une vision complète.",
+        "button": "Choisir Échelle"
+      },
+      "custom": {
+        "name": "Personnalisé",
+        "description": "Conçu autour de votre entreprise",
+        "price": "Tarification personnalisée",
+        "audience": "Entreprises et parcours complexes",
+        "features": {
+          "feature1": "Étapes illimitées",
+          "feature2": "Informations avancées",
+          "feature3": "Rapports personnalisés",
+          "feature4": "Intégrations",
+          "feature5": "SLA et conformité"
+        },
+        "quote": "Notre parcours est complexe. Nous avons besoin d'une solution sur mesure.",
+        "button": "Contacter l'équipe commerciale"
+      }
+    }
+  },
+  "AboutPage": {
+    "title": "À propos d’Uptrackt",
+    "intro": "Uptrackt repose sur une conviction simple : les entreprises doivent comprendre ce que leurs clients vivent au moment où cela se produit, et pas uniquement à travers des rapports tardifs et des données déconnectées.",
+    "analyticsBefore": "Les outils d’analyse traditionnels montrent ce que font les utilisateurs, mais expliquent rarement",
+    "analyticsHighlight": "pourquoi ils le font.",
+    "analyticsAfter": "Les équipes doivent alors deviner pourquoi les clients abandonnent leur parcours, quittent le site avant l’achat ou rencontrent des difficultés pendant l’intégration.",
+    "missionTitle": "Notre mission",
+    "missionDescription": "Notre mission est d’aider les entreprises à recueillir des retours aux moments précis qui influencent les décisions des clients. En combinant les retours contextuels, les signaux comportementaux et l’analyse du parcours, Uptrackt permet aux équipes de détecter rapidement les frictions et d’agir avec confiance.",
+    "problemTitle": "Le problème que nous résolvons",
+    "problemDescription1": "Les parcours clients modernes couvrent de nombreux points de contact : sites web, applications, processus de paiement, expériences d’intégration et interactions avec l’assistance. Lorsqu’un problème survient, la plupart des équipes n’en voient que le résultat : des conversions perdues.",
+    "problemDescription2": "Uptrackt aide les entreprises à identifier les véritables causes des abandons en recueillant les retours clients aux moments critiques du parcours.",
+    "visionTitle": "Notre vision",
+    "visionDescription": "Nous pensons que l’avenir de l’expérience client reposera sur l’intelligence en temps réel, permettant aux équipes de détecter instantanément les frictions, de comprendre le sentiment des clients et de résoudre les problèmes avant qu’ils n’affectent la croissance.",
+    "teamsTitle": "Conçu pour les équipes produit et CX modernes",
+    "teamsDescription": "Uptrackt est conçu pour les équipes produit, les responsables de l’expérience client et les équipes de croissance qui souhaitent mieux comprendre les performances réelles de leur parcours client.",
+    "ctaTitle": "Découvrez les performances réelles de votre parcours client",
+    "ctaButton": "Demander une démonstration"
+  },
+  "SolutionsPage": {
+    "hero": {
+      "title": "Rendez chaque moment client",
+      "highlight": "Mesurable.",
+      "description": "Les parcours clients ne se dégradent pas toujours de façon visible. Les difficultés apparaissent progressivement pendant l’intégration, la tarification, le paiement, l’activation et le renouvellement. Nous recueillons des retours au niveau des décisions lorsque l’intention est la plus forte, afin que vous puissiez corriger les véritables obstacles au chiffre d’affaires."
+    },
+    "intelligence": {
+      "title": "L’intelligence au moment où les décisions sont prises",
+      "revealTitle": "Révélez les abandons invisibles",
+      "revealDescription": "Les clients ne se plaignent pas toujours ; ils partent souvent en silence. Nous recueillons des signaux structurés et des réponses ouvertes auprès des visiteurs anonymes, des utilisateurs en période d’essai, des opportunités perdues et des clients ayant résilié, puis nous les relions directement aux étapes du parcours.",
+      "revealAlt": "Révéler",
+      "intentTitle": "Comprenez l’intention réelle",
+      "intentDescription": "Tous les abandons ne se ressemblent pas. Nous classons les retours selon la sensibilité au prix, les fonctionnalités manquantes, les problèmes de confiance, l’influence de la concurrence, les frictions UX et les attentes non satisfaites afin de transformer les commentaires qualitatifs en informations exploitables par la direction.",
+      "intentAlt": "Intention",
+      "growthTitle": "Des retours qui stimulent la croissance",
+      "growthDescription": "Les informations s’intègrent à votre CRM, vos outils d’analyse, vos tableaux de bord BI et vos processus produit afin d’améliorer directement la conversion, l’activation et la fidélisation.",
+      "growthAlt": "Chiffre d’affaires"
+    },
+    "clarity": {
+      "titlePrefix": "Des zones d’ombre à la",
+      "titleHighlight": "Clarté stratégique",
+      "description": "Les outils d’analyse traditionnels indiquent ce qui s’est passé. Nous révélons pourquoi cela s’est produit, précisément à l’étape où l’intention devient une décision.",
+      "moments": {
+        "onboarding": "Après la fin de l’intégration",
+        "pricing": "Après l’évaluation des tarifs",
+        "checkout": "Après un abandon lors du paiement",
+        "support": "Après une interaction avec l’assistance",
+        "renewal": "Après un renouvellement ou une résiliation"
+      }
+    },
+    "stages": {
+      "titlePrefix": "Des solutions ciblées pour les",
+      "titleHighlight": "Étapes à fort impact",
+      "checkout": {
+        "title": "Abandons lors du paiement",
+        "description": "Comprenez pourquoi les clients abandonnent leur paiement et éliminez les véritables obstacles liés à la confiance, aux frictions et aux moyens de paiement."
+      },
+      "pricing": {
+        "title": "Friction liée aux tarifs",
+        "description": "Identifiez les moments où la perception du prix se dégrade, les objections récurrentes et l’influence du positionnement sur l’hésitation."
+      },
+      "payments": {
+        "title": "Échecs de paiement",
+        "description": "Recueillez des signaux en temps réel lorsque les paiements échouent ou que certaines options sont absentes, afin de détecter les frictions que les journaux d’erreurs traditionnels ne montrent pas."
+      },
+      "postPurchase": {
+        "title": "Abandons après l’achat",
+        "description": "Détectez les premiers signaux de désengagement après l’activation et comprenez pourquoi les clients se retirent avant que leur valeur à long terme ne soit réalisée."
+      }
+    },
+    "alignment": {
+      "title": "Conçu pour l’alignement interfonctionnel",
+      "description": "Conçu pour réunir les équipes produit, croissance, vente et réussite client autour d’informations réelles provenant des clients.",
+      "product": {
+        "title": "Produit",
+        "description": "Identifiez les fonctionnalités manquantes et les frictions UX avec les propres mots des clients. Priorisez la feuille de route grâce à des retours contextualisés pour chaque étape."
+      },
+      "growth": {
+        "title": "Croissance",
+        "description": "Affinez vos messages à partir des véritables objections des acheteurs. Optimisez la conversion pendant l’intégration, la tarification et le paiement."
+      },
+      "sales": {
+        "title": "Ventes",
+        "description": "Comprenez pourquoi les opportunités stagnent et quelles objections dominent. Donnez aux équipes commerciales des arguments fondés sur les informations clients pour raccourcir les cycles de vente."
+      },
+      "success": {
+        "title": "Réussite client",
+        "description": "Détectez rapidement les signaux de résiliation et agissez sur les frictions afin d’améliorer la fidélisation et la valeur vie client."
+      },
+      "leadership": {
+        "title": "Direction",
+        "description": "Transformez les retours qualitatifs en informations exploitables par la direction et alignez la stratégie interfonctionnelle sur un impact mesurable sur le chiffre d’affaires."
+      }
+    },
+    "outcomes": {
+      "title": "Des résultats alignés sur le chiffre d’affaires",
+      "item1": "Une meilleure compréhension de l’adéquation produit-marché",
+      "item2": "Une réduction des abandons pendant l’intégration",
+      "item3": "Des cycles de vente plus courts",
+      "item4": "Une adoption accrue des fonctionnalités",
+      "item5": "Une diminution du taux de résiliation",
+      "item6": "Des résultats directement liés au chiffre d’affaires"
+    },
+    "cta": {
+      "titlePrefix": "Faites de vos informations un",
+      "titleHighlight": "Avantage décisif",
+      "description": "Les entreprises qui réussissent ne recueillent pas simplement davantage de données. Elles les interprètent mieux, au bon moment.",
+      "button": "Collaborons ensemble"
+    }
+  },
+  "TestimonialsPage": {
+    "eyebrow": "Témoignages clients",
+    "titleLine1": "HISTOIRES",
+    "titleLine2": "CLIENTS",
+    "stories": {
+      "purchase": {
+        "title": "Nous avons enfin compris pourquoi les clients n’achetaient pas",
+        "description": "En recueillant des retours au moment exact où les utilisateurs abandonnaient leur parcours, l’équipe a découvert des points de friction totalement invisibles dans les outils d’analyse traditionnels.",
+        "button": "Découvrir l’histoire complète"
+      },
+      "anonymous": {
+        "title": "Nous avons recueilli les retours de visiteurs anonymes",
+        "description": "L’équipe a obtenu des informations utiles auprès de visiteurs qui ne s’étaient jamais connectés, n’avaient jamais contacté l’assistance et n’avaient effectué aucun achat.",
+        "button": "Découvrir l’histoire complète"
+      },
+      "integration": {
+        "title": "Une intégration fluide à notre infrastructure existante",
+        "description": "Uptrackt a ajouté le contexte des décisions clients sans remplacer les outils d’analyse, tableaux de bord, processus ou systèmes de reporting existants.",
+        "button": "Découvrir l’histoire complète"
+      },
+      "revenue": {
+        "title": "Nous avons transformé les retours d’abandon en impact financier",
+        "description": "Les frictions signalées par les clients ont été directement reliées aux priorités de conversion et de chiffre d’affaires, permettant aux équipes de cibler les améliorations les plus importantes.",
+        "button": "Découvrir l’histoire complète"
+      }
+    }
   }
 }

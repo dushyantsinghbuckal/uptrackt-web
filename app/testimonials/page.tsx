@@ -1,126 +1,85 @@
-const testimonials = [
-  {
-    title: "We Finally Understood Why Customers Didn’t Buy",
-    description:
-      "By capturing feedback at the exact moment users dropped off, the team uncovered friction points that traditional analytics completely missed.",
-    href: "/testimonials/we-finally-understood-why-customers-didnt-buy",
-  },
-  {
-    title: "Captured Feedback from Anonymous Visitors",
-    description:
-      "Without forcing sign-ups or logins, the company collected high-quality insights from users who would otherwise remain invisible.",
-    href: "/testimonials/captured-feedback-from-anonymous-visitors",
-  },
-  {
-    title: "Turned Drop-Off Feedback into Revenue Impact",
-    description:
-      "Actionable feedback loops helped prioritize fixes that directly improved conversions and measurable revenue outcomes.",
-    href: "/testimonials/turned-drop-off-feedback-into-revenue-impact",
-  },
-  {
-    title: "Plugged Cleanly into Our Existing Stack",
-    description:
-      "The solution integrated seamlessly with existing analytics and tooling, without disrupting live customer journeys.",
-    href: "/testimonials/plugged-cleanly-into-our-existing-stack",
-  },
-];
+import {getTranslations} from "next-intl/server";
+import Link from "next/link";
 
-export default function TestimonialsPage() {
+const stories = [
+  {
+    key: "purchase",
+    href: "/testimonials/we-finally-understood-why-customers-didnt-buy"
+  },
+  {
+    key: "anonymous",
+    href: "/testimonials/captured-feedback-from-anonymous-visitors"
+  },
+  {
+    key: "integration",
+    href: "/testimonials/plugged-cleanly-into-our-existing-stack"
+  },
+  {
+    key: "revenue",
+    href: "/testimonials/turned-drop-off-feedback-into-revenue-impact"
+  }
+] as const;
+
+export default async function TestimonialsPage() {
+  const t = await getTranslations("TestimonialsPage");
+
   return (
-    <main
-      style={{
-        backgroundColor: "#000",
-        minHeight: "100vh",
-        padding: "120px 24px",
-        overflowX: "hidden",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-        }}
-      >
-        {/* Heading */}
-        <h2 className="text-white font-semibold tracking-widest leading-none mb-12">
-          <div className="text-4xl md:text-8xl">CUSTOMER</div>
-          <div className="text-4xl md:text-8xl text-gray-500">
-            STORIES
-          </div>
-        </h2>
+    <main className="min-h-screen bg-black pb-20 text-white">
+      <section className="mx-auto max-w-7xl px-6 pb-14 pt-8 md:px-10">
+        <p className="mb-6 text-sm font-semibold uppercase tracking-[0.3em] text-gray-400">
+          {t("eyebrow")}
+        </p>
 
-        {/* Testimonials Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr",
-            gap: "24px",
-          }}
-        >
-          {testimonials.map((item, index) => (
+        <h1 className="font-bold uppercase leading-[0.88] tracking-tight">
+          <span className="block text-6xl text-white sm:text-7xl md:text-9xl">
+            {t("titleLine1")}
+          </span>
 
-            <div
-              key={item.href}
-              style={{
-                backgroundColor: index === 1 || index === 2 ? "#cfcfcf" : "#ffffff",
-                border: index % 2 === 0 ? "1px solid #e5e7eb" : "none",
-                padding: "24px",
-                borderRadius: "6px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                minHeight: "320px",
-              }}
-            >
-              <div>
-                <h3
-                  style={{
-                    fontSize: "clamp(24px, 5vw, 30px)",
-                    fontWeight: 700,
-                    color: "#000",
-                    marginBottom: "24px",
-                    lineHeight: 1.25,
-                    textDecoration: "underline",
-                    textUnderlineOffset: "6px",
-                  }}
-                >
-                  {item.title}
-                </h3>
+          <span className="block text-6xl text-gray-500 sm:text-7xl md:text-9xl">
+            {t("titleLine2")}
+          </span>
+        </h1>
+      </section>
 
-                <p
-                  style={{
-                    fontSize: "18px",
-                    color: "#333",
-                    lineHeight: 1.8,
-                  }}
-                >
-                  {item.description}
-                </p>
-              </div>
+      <section className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 md:px-10">
+      {stories.map((story, index) => (
+  <article
+    key={story.key}
+    className={`w-fit max-w-5xl rounded-lg px-7 py-7 shadow-sm md:px-10 md:py-8 ${
+      index % 2 === 1
+        ? "border border-gray-700 bg-gray-600 text-white"
+        : "border border-gray-300 bg-white text-black"
+    }`}
+  >
+<h2
+  className={`text-2xl font-bold leading-tight underline decoration-2 underline-offset-8 md:text-4xl ${
+    index % 2 === 1 ? "text-white" : "text-black"
+  }`}
+>              {t(`stories.${story.key}.title`)}
+            </h2>
 
-              <a
-  href={item.href}
-  style={{
-    marginTop: "40px",
-    alignSelf: "center",
-    backgroundColor: "#000",
-    color: "#fff",
-    padding: "12px 24px",
-    fontSize: "16px",
-    fontWeight: 600,
-    textDecoration: "none",
-    borderRadius: "9999px",
-    lineHeight: 1,
-    whiteSpace: "nowrap",
-  }}
->
-  Explore Full Story
-</a>
+            <p
+  className={`mt-6 text-lg leading-8 md:text-xl ${
+    index % 2 === 1 ? "text-gray-300" : "text-gray-600"
+  }`}
+>              {t(`stories.${story.key}.description`)}
+            </p>
 
+            <div className="mt-8 flex justify-center">
+                            <Link
+                href={story.href}
+                className={`inline-flex items-center justify-center rounded-full px-8 py-3 text-base font-semibold transition md:text-lg ${
+                  index % 2 === 1
+                    ? "bg-white text-black hover:bg-gray-200"
+                    : "bg-black text-white hover:bg-gray-600"
+                }`}
+                              >
+                {t(`stories.${story.key}.button`)}
+              </Link>
             </div>
-                  ))}
-        </div>
-      </div>
+          </article>
+        ))}
+      </section>
     </main>
   );
 }

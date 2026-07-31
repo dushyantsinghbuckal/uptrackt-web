@@ -1,20 +1,22 @@
-export default function PlatformPage() {
+import { getTranslations } from "next-intl/server";
+export default async function PlatformPage() {
+  const t = await getTranslations("PlatformPage");
   return (
     <main className="mx-auto max-w-6xl px-6 py-24">
 
       {/* PLATFORM HERO */}
       <section id="platform" className="text-center">
-        <h1 className="text-4xl md:text-7xl font-bold text-gray-900">
-          <span className="text-black">Understand Behavior</span>
-          <span className="text-gray-400">.</span>
-          <br />
-          <span className="text-gray-400">Unlock Growth</span>
-          <span className="text-black">.</span>
-        </h1>
-        <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
-          Customer experience intelligence platform built for modern retail and e-commerce teams to detect friction, understand behavior, and
-          act with clarity and speed.
-        </p>
+      <h1 className="text-4xl md:text-7xl font-bold text-gray-900">
+  <span className="text-black">{t("hero.title1")}</span>
+  <span className="text-gray-400">.</span>
+  <br />
+  <span className="text-gray-400">{t("hero.title2")}</span>
+  <span className="text-black">.</span>
+</h1>
+
+<p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
+  {t("hero.description")}
+</p>
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
           {/* Buttons removed from hero as per your code */}
         </div>
@@ -23,11 +25,13 @@ export default function PlatformPage() {
       {/* TRUST BADGES */}
       <section className="mt-16 border-y border-gray-200 py-4">
         <div className="flex flex-wrap items-center justify-center gap-8 text-xl text-gray-600">
-          <span className="font-medium">Integrates with 20+ platforms</span>
+        <span className="font-medium">
+  {t("trust.integration")}
+</span>
           <div className="h-6 w-px bg-gray-300 hidden md:block"></div>
-          <span>⚡ 2000+ events processed monthly</span>
+          <span>⚡ {t("trust.events")}</span>
           <div className="h-6 w-px bg-gray-300 hidden md:block"></div>
-          <span>🔒 97% uptime SLA</span>
+          <span>🔒 {t("trust.uptime")}</span>
         </div>
       </section>
 

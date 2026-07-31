@@ -10,7 +10,7 @@
     "closeMenu": "Close navigation menu",
     "language": "Language",
     "english": "English",
-    "french": "FranÃ§ais"
+    "french": "Français"
   },
   "Home": {
     "badge": "Customer Experience Intelligence",
@@ -79,7 +79,7 @@
     "items": {
       "item1": {
         "question": "What is Uptrackt?",
-        "answer": "Uptrackt is a customer decision intelligence platform that helps businesses understand why users hesitate or drop off at critical moments in their digital journey. Instead of relying solely on behavioral analytics, Uptrackt captures structured, in-context feedback at high-intent decision pointsâ€”turning uncertainty into actionable insight. This enables product, growth, and CX teams to prioritize improvements based on real customer reasoning, not assumptions."
+        "answer": "Uptrackt is a customer decision intelligence platform that helps businesses understand why users hesitate or drop off at critical moments in their digital journey. Instead of relying solely on behavioral analytics, Uptrackt captures structured, in-context feedback at high-intent decision points—turning uncertainty into actionable insight. This enables product, growth, and CX teams to prioritize improvements based on real customer reasoning, not assumptions."
       },
       "item2": {
         "question": "What problem does Uptrackt solve?",
@@ -95,7 +95,7 @@
       },
       "item5": {
         "question": "What kind of insights does Uptrackt provide?",
-        "answer": "Uptrackt surfaces structured insights such as common hesitation themes, conversion blockers, trust gaps, pricing confusion, usability friction, and drop-off triggers at key decision points. It helps teams understand not just where users leave, but whyâ€”enabling clearer prioritization and smarter optimization decisions across the funnel."
+        "answer": "Uptrackt surfaces structured insights such as common hesitation themes, conversion blockers, trust gaps, pricing confusion, usability friction, and drop-off triggers at key decision points. It helps teams understand not just where users leave, but why—enabling clearer prioritization and smarter optimization decisions across the funnel."
       },
       "item6": {
         "question": "Is Uptrackt difficult to implement or use?",
@@ -118,7 +118,19 @@
     "refund": "Refund Policy",
     "getStarted": "Get Started",
     "getStartedDescription": "See how Uptrackt helps you turn feedback into growth.",
-    "copyright": "Â© 2026 Uptrackt. All rights reserved."
+    "copyright": "© 2026 Uptrackt. All rights reserved."
+  },
+  "PlatformPage": {
+    "hero": {
+      "title1": "Understand Behavior",
+      "title2": "Unlock Growth",
+      "description": "Customer experience intelligence platform built for modern retail and e-commerce teams to detect friction, understand behavior, and act with clarity and speed."
+    },
+    "trust": {
+      "integration": "Integrates with 20+ platforms",
+      "events": "2000+ events processed monthly",
+      "uptime": "97% uptime SLA"
+    }
   },
   "ResourcesPage": {
     "title": "Resources",
@@ -168,5 +180,211 @@
     "ctaTitle": "Cannot find what you are looking for?",
     "ctaDescription": "Our team can create custom resources tailored to your specific industry and use case.",
     "ctaButton": "Talk to an Expert"
+  },
+  "Pricing": {
+    "title": "Choose your Growth Plan",
+    "subtitle": "Simple plans for understanding your customer journey. No complexity, no noise.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "perMonth": " / month",
+    "perYear": " / year",
+    "bestFor": "Best for",
+    "paymentLoading": "Payment system is loading. Please try again in a few seconds.",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Fix the biggest problem first",
+        "audience": "Early-stage brands & small teams",
+        "features": {
+          "feature1": "Any 2 journey stages",
+          "feature2": "Anonymous feedback capture",
+          "feature3": "Contextual questions",
+          "feature4": "10 insights / month",
+          "feature5": "Monthly summary"
+        },
+        "quote": "Customers are dropping off. We need to know why, quickly.",
+        "button": "Get Starter"
+      },
+      "growth": {
+        "name": "Growth",
+        "description": "See how your journey truly performs",
+        "audience": "Growing brands & CX teams",
+        "features": {
+          "feature1": "5 journey stages",
+          "feature2": "Cross-stage comparison",
+          "feature3": "AI root-cause analysis",
+          "feature4": "50 insights / month",
+          "feature5": "Revenue signals"
+        },
+        "quote": "Problems do not exist in isolation. We need to see how stages affect each other.",
+        "button": "Get Growth"
+      },
+      "scale": {
+        "name": "Scale",
+        "description": "Full-funnel decision intelligence",
+        "audience": "Serious D2C brands & marketplaces",
+        "features": {
+          "feature1": "Everything in Growth",
+          "feature2": "Cover all 10 journey stages",
+          "feature3": "End-to-end visibility",
+          "feature4": "Unlimited insights",
+          "feature5": "Predictive signals",
+          "feature6": "Priority support",
+          "feature7": "Quarterly journey truth review"
+        },
+        "quote": "We own the complete journey. We need the full truth.",
+        "button": "Get Scale"
+      },
+      "custom": {
+        "name": "Custom",
+        "description": "Built around your business",
+        "price": "Custom pricing",
+        "audience": "Enterprise & complex journeys",
+        "features": {
+          "feature1": "Unlimited stages",
+          "feature2": "Advanced insights",
+          "feature3": "Custom reporting",
+          "feature4": "Integrations",
+          "feature5": "SLA & compliance"
+        },
+        "quote": "Our journey is complex. We need it tailored.",
+        "button": "Contact Sales"
+      }
+    }
+  },
+  "AboutPage": {
+    "title": "About Uptrackt",
+    "intro": "Uptrackt was built around a simple belief: businesses should understand what their customers experience in real moments, not just through delayed reports and disconnected analytics.",
+    "analyticsBefore": "Traditional analytics tools show what users do, but rarely explain",
+    "analyticsHighlight": "why they do it.",
+    "analyticsAfter": "Teams are often left guessing why customers abandon a journey, drop off before purchasing, or struggle during onboarding.",
+    "missionTitle": "Our Mission",
+    "missionDescription": "Our mission is to help companies capture feedback at the exact moments that shape customer decisions. By combining contextual feedback, behavioral signals, and journey analytics, Uptrackt enables teams to uncover friction quickly and act with confidence.",
+    "problemTitle": "The Problem We Solve",
+    "problemDescription1": "Modern customer journeys span multiple touchpoints—websites, apps, checkout flows, onboarding experiences, and support interactions. When something breaks in this journey, most teams only see the outcome: lost conversions.",
+    "problemDescription2": "Uptrackt helps businesses identify the true reasons behind customer drop-offs by capturing real feedback during critical moments in the journey.",
+    "visionTitle": "Our Vision",
+    "visionDescription": "We believe the future of customer experience will be driven by real-time intelligence—where teams can instantly detect friction, understand sentiment, and resolve issues before they impact growth.",
+    "teamsTitle": "Built for modern product and CX teams",
+    "teamsDescription": "Uptrackt is designed for product teams, customer experience leaders, and growth teams who want a clearer understanding of how their customer journey truly performs.",
+    "ctaTitle": "See how your customer journey really performs",
+    "ctaButton": "Request a Demo"
+  },
+  "SolutionsPage": {
+    "hero": {
+      "title": "Make Every Customer Moment",
+      "highlight": "Measurable.",
+      "description": "Customer journeys don’t fail loudly. They erode silently at onboarding, pricing, checkout, activation, and renewal. We surface decision-level feedback exactly when intent is highest, so you can fix what truly blocks revenue."
+    },
+    "intelligence": {
+      "title": "Intelligence Where Decisions Are Made",
+      "revealTitle": "Reveal Hidden Drop Offs",
+      "revealDescription": "Customers don’t always complain; they quietly leave. We capture structured and open-ended signals from anonymous visitors, trial users, lost deals, and churned accounts, mapping feedback directly to funnel stages.",
+      "revealAlt": "Reveal",
+      "intentTitle": "Understand Real Intent",
+      "intentDescription": "Not all churn is equal. We categorize feedback into pricing sensitivity, feature gaps, trust concerns, competitive pull, UX friction, and expectation misalignment, turning qualitative input into executive-ready insight.",
+      "intentAlt": "Intent",
+      "growthTitle": "Feedback That Drives Growth",
+      "growthDescription": "Insights integrate into your CRM, analytics, BI dashboards, and product workflows, directly influencing conversion rates, activation improvements, and retention strategies.",
+      "growthAlt": "Revenue"
+    },
+    "clarity": {
+      "titlePrefix": "From Blind Spots to",
+      "titleHighlight": "Strategic Clarity",
+      "description": "Traditional analytics show what happened. We surface why it happened precisely at the stage where intent turns into decision.",
+      "moments": {
+        "onboarding": "After onboarding completion",
+        "pricing": "After pricing evaluation",
+        "checkout": "After checkout abandonment",
+        "support": "After support interaction",
+        "renewal": "After renewal or churn"
+      }
+    },
+    "stages": {
+      "titlePrefix": "Target Solutions For",
+      "titleHighlight": "High Impact Stages",
+      "checkout": {
+        "title": "Checkout Drop-offs",
+        "description": "Understand why customers abandon checkout and eliminate real blockers tied to payment confidence, friction, and trust."
+      },
+      "pricing": {
+        "title": "Pricing Friction",
+        "description": "Identify where price perception breaks, which objections repeat, and how positioning influences decision hesitation."
+      },
+      "payments": {
+        "title": "Payment Failures",
+        "description": "Capture real-time signals when payments fail or options are missing, uncovering friction that traditional error logs miss."
+      },
+      "postPurchase": {
+        "title": "Post Purchase Drop-offs",
+        "description": "Detect early churn signals after activation and understand why customers disengage before lifetime value is realized."
+      }
+    },
+    "alignment": {
+      "title": "Designed For Cross Functional Alignment",
+      "description": "Built to connect product, growth, sales, and customer success teams around real customer insight.",
+      "product": {
+        "title": "Product",
+        "description": "Identify feature gaps and UX friction in real customer language. Prioritize roadmap decisions using contextual, stage-specific feedback."
+      },
+      "growth": {
+        "title": "Growth",
+        "description": "Refine messaging based on true buyer objections. Optimize conversion across onboarding, pricing, and checkout."
+      },
+      "sales": {
+        "title": "Sales",
+        "description": "Understand why deals stall and what objections dominate. Equip representatives with insight-driven positioning to shorten sales cycles."
+      },
+      "success": {
+        "title": "Customer Success",
+        "description": "Detect churn signals early and act on friction to improve retention and lifetime value."
+      },
+      "leadership": {
+        "title": "Leadership",
+        "description": "Translate qualitative feedback into executive-ready insight and align cross-functional strategy with measurable revenue impact."
+      }
+    },
+    "outcomes": {
+      "title": "Revenue Aligned Outcomes",
+      "item1": "Stronger product-market fit clarity",
+      "item2": "Reduced onboarding abandonment",
+      "item3": "Shorter sales cycles",
+      "item4": "Higher feature adoption",
+      "item5": "Lower churn rates",
+      "item6": "Revenue aligned outcomes"
+    },
+    "cta": {
+      "titlePrefix": "Make Insight Your",
+      "titleHighlight": "Unfair Advantage",
+      "description": "The companies that win don’t collect more data. They interpret it better, at the right moment.",
+      "button": "Let’s Collaborate"
+    }
+  },
+  "TestimonialsPage": {
+    "eyebrow": "Customer Stories",
+    "titleLine1": "CUSTOMER",
+    "titleLine2": "STORIES",
+    "stories": {
+      "purchase": {
+        "title": "We Finally Understood Why Customers Didn’t Buy",
+        "description": "By capturing feedback at the exact moment users dropped off, the team uncovered friction points that traditional analytics completely missed.",
+        "button": "Explore Full Story"
+      },
+      "anonymous": {
+        "title": "Captured Feedback From Anonymous Visitors",
+        "description": "The team collected meaningful insight from visitors who never logged in, contacted support, or completed a purchase.",
+        "button": "Explore Full Story"
+      },
+      "integration": {
+        "title": "Plugged Cleanly Into Our Existing Stack",
+        "description": "Uptrackt added customer decision context without replacing existing analytics, dashboards, workflows, or reporting infrastructure.",
+        "button": "Explore Full Story"
+      },
+      "revenue": {
+        "title": "Turned Drop-Off Feedback Into Revenue Impact",
+        "description": "Customer-reported friction was connected directly to conversion and revenue priorities, helping teams focus on the highest-impact improvements.",
+        "button": "Explore Full Story"
+      }
+    }
   }
 }
