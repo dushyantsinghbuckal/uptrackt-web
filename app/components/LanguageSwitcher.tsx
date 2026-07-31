@@ -3,7 +3,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, useTransition } from "react";
-import { Globe2 } from "lucide-react";
+import { Languages } from "lucide-react";
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
@@ -32,10 +32,10 @@ export default function LanguageSwitcher() {
     <label className="relative inline-flex items-center">
       <span className="sr-only">{t("language")}</span>
 
-      <Globe2
-        aria-hidden="true"
-        className="pointer-events-none absolute left-3 h-4 w-4 text-gray-500"
-      />
+      <Languages
+  aria-hidden="true"
+  className="pointer-events-none absolute left-3 h-4 w-4 text-gray-600"
+/>
 
       <select
         value={locale}
