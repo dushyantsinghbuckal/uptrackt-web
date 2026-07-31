@@ -21,7 +21,7 @@
     "enterpriseTitle": "Une intelligence de l'expérience client conçue pour les entreprises",
     "enterpriseDescription": "Recueillez les retours clients aux moments clés du parcours de vente au détail et de commerce électronique. Identifiez les points de friction, agissez plus rapidement et générez une croissance mesurable.",
     "discoveryTitle": "Vous ne savez pas par où commencer ?",
-    "discoveryHighlight": "Nous concevons une solution adapt�e à vos besoins.",
+    "discoveryHighlight": "Nous concevons une solution adaptée à vos besoins.",
     "discoveryDescription": "Réservez un appel de découverte et explorons ensemble les possibilités.",
     "collaborate": "Collaborons ensemble"
   },
@@ -51,14 +51,14 @@
     "act": "AGIR",
     "captureDescription": "Recueillez les retours aux moments qui influencent les décisions des clients.",
     "analyzeDescription": "Analysez les frictions, le sentiment et les abandons au moment où ils se produisent.",
-    "actDescription": "Agissez imm�diatement gr�ce à des informations que vos �quipes ne peuvent ignorer."
+    "actDescription": "Agissez immédiatement grâce à des informations que vos équipes ne peuvent ignorer."
   },
   "TestimonialsPreview": {
     "intro": "Voici comment nos clients détectent les abandons cachés, comprennent les véritables intentions",
     "introHighlight": "et transforment les retours en résultats commerciaux concrets.",
     "testimonial1": "Nous avons enfin compris pourquoi les clients n'achetaient pas",
     "testimonial2": "Nous avons recueilli les retours de visiteurs anonymes",
-    "testimonial3": "Une int�gration fluide à notre infrastructure existante",
+    "testimonial3": "Une intégration fluide à notre infrastructure existante",
     "testimonial4": "Les retours sur les abandons ont produit un impact sur le chiffre d'affaires"
   },
   "TrustedBy": {
@@ -66,9 +66,9 @@
   },
   "WhyUptrackt": {
     "title": "Pourquoi choisir Uptrackt",
-    "description": "Uptrackt aide les �quipes à comprendre en temps r�el les difficult�s rencontr�es par les utilisateurs, afin de supprimer plus t�t les points de friction et d'am�liorer plus rapidement le parcours client.",
+    "description": "Uptrackt aide les équipes à comprendre en temps réel les difficultés rencontrées par les utilisateurs, afin de supprimer plus tôt les points de friction et d'améliorer plus rapidement le parcours client.",
     "actTitle": "Agissez plus rapidement",
-    "actDescription": "Les informations en temps r�el permettent à votre �quipe de r�pondre imm�diatement aux retours des utilisateurs, de r�duire les d�lais de d�cision et d'acc�l�rer les cycles d'am�lioration.",
+    "actDescription": "Les informations en temps réel permettent à votre équipe de répondre immédiatement aux retours des utilisateurs, de réduire les délais de décision et d'accélérer les cycles d'amélioration.",
     "frictionTitle": "Corrigez les frictions plus tôt",
     "frictionDescription": "Identifiez les difficultés avant qu'elles ne s'aggravent. Notre approche fondée sur les moments clés met rapidement en évidence les points de friction afin de fluidifier le parcours utilisateur.",
     "growTitle": "Développez-vous intelligemment",
@@ -79,15 +79,15 @@
     "items": {
       "item1": {
         "question": "Qu'est-ce qu'Uptrackt ?",
-        "answer": "Uptrackt est une plateforme d'intelligence d�cisionnelle client qui aide les entreprises à comprendre pourquoi les utilisateurs h�sitent ou abandonnent à des moments critiques de leur parcours num�rique. Au lieu de s'appuyer uniquement sur l'analyse comportementale, Uptrackt recueille des retours structur�s et contextualis�s aux points de d�cision à forte intention, transformant ainsi l'incertitude en informations exploitables. Les �quipes produit, croissance et CX peuvent alors prioriser les am�liorations en fonction du raisonnement r�el des clients plut�t que d'hypoth�ses."
+        "answer": "Uptrackt est une plateforme d'intelligence décisionnelle client qui aide les entreprises à comprendre pourquoi les utilisateurs hésitent ou abandonnent à des moments critiques de leur parcours numérique. Au lieu de s'appuyer uniquement sur l'analyse comportementale, Uptrackt recueille des retours structurés et contextualisés aux points de décision à forte intention, transformant ainsi l'incertitude en informations exploitables. Les équipes produit, croissance et CX peuvent alors prioriser les améliorations en fonction du raisonnement réel des clients plutôt que d'hypothèses."
       },
       "item2": {
         "question": "Quel problème Uptrackt résout-il ?",
-        "answer": "Uptrackt comble l'�cart entre ce que font les utilisateurs et les raisons qui motivent leurs actions. Les outils d'analyse traditionnels indiquent o� les utilisateurs abandonnent, mais pas pourquoi ils h�sitent. Uptrackt recueille des retours structur�s aux points de d�cision pour aider les �quipes à identifier les v�ritables obstacles à la conversion, à prioriser les corrections les plus importantes et à prendre des d�cisions d'optimisation plus efficaces, ax�es sur le chiffre d'affaires."
+        "answer": "Uptrackt comble l'écart entre ce que font les utilisateurs et les raisons qui motivent leurs actions. Les outils d'analyse traditionnels indiquent où les utilisateurs abandonnent, mais pas pourquoi ils hésitent. Uptrackt recueille des retours structurés aux points de décision pour aider les équipes à identifier les véritables obstacles à la conversion, à prioriser les corrections les plus importantes et à prendre des décisions d'optimisation plus efficaces, axées sur le chiffre d'affaires."
       },
       "item3": {
         "question": "Où peut-on utiliser Uptrackt ?",
-        "answer": "Uptrackt peut �tre utilis� aux points de contact essentiels du parcours client, notamment sur les pages tarifaires, dans les processus de paiement, les parcours d'inscription, les s�quences d'int�gration, les comparaisons de produits, les renouvellements et les processus de candidature. Il est particuli�rement utile partout o� les utilisateurs prennent des d�cisions à forte intention et o� l'h�sitation, l'abandon ou la friction ont un impact direct sur la conversion et le chiffre d'affaires."
+        "answer": "Uptrackt peut être utilisé aux points de contact essentiels du parcours client, notamment sur les pages tarifaires, dans les processus de paiement, les parcours d'inscription, les séquences d'intégration, les comparaisons de produits, les renouvellements et les processus de candidature. Il est particulièrement utile partout où les utilisateurs prennent des décisions à forte intention et où l'hésitation, l'abandon ou la friction ont un impact direct sur la conversion et le chiffre d'affaires."
       },
       "item4": {
         "question": "Uptrackt exige-t-il que les utilisateurs se connectent ou partagent des données personnelles ?",
@@ -95,11 +95,11 @@
       },
       "item5": {
         "question": "Quels types d'informations Uptrackt fournit-il ?",
-        "answer": "Uptrackt fait ressortir des informations structur�es telles que les motifs d'h�sitation r�currents, les obstacles à la conversion, les probl�mes de confiance, les incompr�hensions tarifaires, les difficult�s d'utilisation et les d�clencheurs d'abandon aux principaux points de d�cision. Les �quipes comprennent ainsi non seulement o� les utilisateurs abandonnent, mais aussi pourquoi, ce qui facilite la priorisation et l'optimisation de l'ensemble du parcours."
+        "answer": "Uptrackt fait ressortir des informations structurées telles que les motifs d'hésitation récurrents, les obstacles à la conversion, les problèmes de confiance, les incompréhensions tarifaires, les difficultés d'utilisation et les déclencheurs d'abandon aux principaux points de décision. Les équipes comprennent ainsi non seulement où les utilisateurs abandonnent, mais aussi pourquoi, ce qui facilite la priorisation et l'optimisation de l'ensemble du parcours."
       },
       "item6": {
-        "question": "Uptrackt est-il difficile à mettre en �\u001cuvre ou à utiliser ?",
-        "answer": "Non. Uptrackt est con�u pour �tre facile à adopter et à g�rer, sans n�cessiter d'expertise technique approfondie. Son interface intuitive convient à diff�rentes fonctions : les �quipes produit, croissance, CX et de direction peuvent consulter les informations sans d�pendre d'analystes ou de d�veloppeurs. Les rapports structur�s, les th�mes d'h�sitation class�s et les points de friction prioritaires sont pr�sent�s clairement afin de faciliter une prise de d�cision rapide."
+        "question": "Uptrackt est-il difficile à mettre en œuvre ou à utiliser ?",
+        "answer": "Non. Uptrackt est conçu pour être facile à adopter et à gérer, sans nécessiter d'expertise technique approfondie. Son interface intuitive convient à différentes fonctions : les équipes produit, croissance, CX et de direction peuvent consulter les informations sans dépendre d'analystes ou de développeurs. Les rapports structurés, les thèmes d'hésitation classés et les points de friction prioritaires sont présentés clairement afin de faciliter une prise de décision rapide."
       }
     }
   },
